@@ -1,3 +1,33 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.avatar {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.btn-left {
+  background-color: rgba($color: #d8d8d8, $alpha: 1.0) ;
+  width: 70px;
+  border: 1px white solid;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 1.0);
+}
+
+.btn-middle {
+  background-color: rgba($color: #d8d8d8, $alpha: 1.0) ;
+  width: 70px;
+  border: 1px white solid;
+  border-radius: 0 0 0 0;
+  margin: 0 2px;
+  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 1.0);
+}
+
+.btn-right {
+  background-color: rgba($color: #d8d8d8, $alpha: 1.0) ;
+  width: 70px;
+  border: 1px white solid;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 1.0);
+}
