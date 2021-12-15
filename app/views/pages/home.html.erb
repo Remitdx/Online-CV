@@ -1,11 +1,23 @@
-<div class="container">
-  <h1>Welcome to my portfolio !</h1>
-  <%= image_tag "RemBG_2.jpg", class: "avatar" %>
-  <%= image_tag "RemLul2.jpg", class: "avatar" %>
-  <%= image_tag "RemLul.jpg", class: "avatar" %>
-  <div class="d-flex">
-    <span class="btn btn-left">Classic</span>
-    <span class="btn btn-middle">Dark</span>
-    <span class="btn btn-right">Funky</span>
+<div data-controller="change-mode">
+  <div class="navigate py-4">
+    <div class="d-flex justify-content-around pb-2">
+      <h4><%= link_to "Menu", "#", class: "nav-l" %></h4>
+      <h4><%= link_to "Projects", "#", class: "nav-l" %></h4>
+      <h4><%= link_to "Contact", "#", class: "nav-l" %></h4>
+    </div>
+    <div class="d-flex pl-4">
+      <span class="button btn-darky btn-left" data-change-mode-target="btn-classic">Classic</span>
+      <span class="button btn-middle" data-change-mode-target="btn-black">Dark</span>
+      <span class="button btn-right" data-change-mode-target="btn-funky">Funky</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main-content">
+      <h1>Welcome to my portfolio !</h1>
+      <%= image_tag "RemBG_2.jpg", class: "avatar" %>
+      <%= image_tag "RemLul2.jpg", class: "avatar" %>
+      <%= image_tag "RemLul.jpg", class: "avatar d-none" %>
+      <div class="bio">ceci est une belle bio</div>
+    </div>
   </div>
 </div>
