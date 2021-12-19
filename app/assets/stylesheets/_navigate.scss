@@ -1,0 +1,18 @@
+.navigate-classic {
+  width: 100%;
+  background-color: rgba($color: #cccccc, $alpha: 1.0);
+}
+
+.navigate-dark {
+  width: 100%;
+  background-color: rgba($color: #292929, $alpha: 1.0);
+  h4 {
+    color: white;
+    text-shadow: 0 0 1px black;
+  }
+}
+
+.navigate-funky {
+  width: 100%;
+  background-color: rgba($color: #FD96DD, $alpha: 1.0);
+}
