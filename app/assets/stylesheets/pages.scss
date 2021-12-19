@@ -3,11 +3,31 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.navigate {
+.navigate-classic {
+  background-color: rgba($color: #cccccc, $alpha: 1.0);
+}
+
+.navigate-dark {
+  background-color: rgba($color: #292929, $alpha: 1.0);
+  h4 {
+    color: white;
+    text-shadow: 0 0 1px black;
+  }
+}
+
+.navigate-funky {
   background-color: rgba($color: #FD96DD, $alpha: 1.0);
 }
-.nav-l:hover {
-  color: #F1EA4A;
+
+.body-classic{
+  background-color: #FFFFFF;
+}
+
+.body-dark{
+  background-color: #424242;
+
+}.body-funky{
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static-mapetitemercerie.o10c.net/126420-thickbox_default/-coupon-250-cm-x-110-cm-tissu-coton-a-carreaux-janis-noirvert.jpg);
 }
 
 a {
