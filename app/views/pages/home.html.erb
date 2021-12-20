@@ -15,14 +15,14 @@
     <div class="main-content">
       <h1>Welcome to my portfolio !</h1>
       <div class="d-flex justify-content-around">
-        <%= image_tag "RemBG_2.jpg", class: "avatar py-2", data: { change_mode_target: "bg" } %>
-        <%= image_tag "RemLul.jpg", class: "avatar py-2 d-none", data: { change_mode_target: "lul" } %>
-        <%= image_tag "RemLul2.jpg", class: "avatar py-2 d-none", data: { change_mode_target: "lul2" } %>
+        <%= image_tag "RemBG_2.jpg", class: "avatar py-3", data: { change_mode_target: "bg" } %>
+        <%= image_tag "RemLul.jpg", class: "avatar py-3 d-none", data: { change_mode_target: "lul" } %>
+        <%= image_tag "RemLul2.jpg", class: "avatar py-3 d-none", data: { change_mode_target: "lul2" } %>
       </div>
-      <div class="bio">
+      <div class="card-classic" data-change-mode-target="card">
         <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
-        <% 10.times do %>
-          <%= "#{lorem}" %>
+        <% 7.times do %>
+          <p><%= "#{lorem}" %></p>
         <% end  %>
       </div>
     </div>
