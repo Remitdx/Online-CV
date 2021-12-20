@@ -1,15 +1,30 @@
 .body-classic{
   background-color: $blue-1;
+  h1 {
+    color: $blue-4;
+  }
 }
 
 .body-dark{
   background-color: $black-1;
+  h1 {
+    color: $white-1;
+  }
 }
 
 .body-funky{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(https://static-mapetitemercerie.o10c.net/126420-thickbox_default/-coupon-250-cm-x-110-cm-tissu-coton-a-carreaux-janis-noirvert.jpg);
+  background-image: linear-gradient(rgba(185, 185, 185, 0.2),rgba(185, 185, 185, 0.2)), url(https://static-mapetitemercerie.o10c.net/126420-thickbox_default/-coupon-250-cm-x-110-cm-tissu-coton-a-carreaux-janis-noirvert.jpg);
   background-position: center;
   h1 {
       color: $banana;
   }
+}
+
+
+.fa-lemon {
+  position: absolute;
+  top: 500px;
+  right: 350px;
+  font-size: 40px;
+  color: $banana;
 }
