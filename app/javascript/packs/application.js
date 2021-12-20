@@ -11,3 +11,10 @@ Rails.start()
 Turbolinks.start()
 
 import "controllers"
+
+import { DynamicJobTitle } from '../components/jobtitle';
+// import { initSelect2 } from '../components/init_select2';
+
+document.addEventListener('turbolinks:load', () => {
+  DynamicJobTitle();
+});
