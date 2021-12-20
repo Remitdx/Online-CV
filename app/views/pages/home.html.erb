@@ -1,6 +1,6 @@
 <div class="body-classic" data-controller="change-mode" data-change-mode-target="body">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
-    <div class="d-flex container justify-content-between">
+    <div class="d-flex container justify-content-around">
       <h4><%= link_to "Menu", "#", class: "nav-l" %></h4>
       <h4><%= link_to "Projects", "#", class: "nav-l" %></h4>
       <h4><%= link_to "Contact", "#", class: "nav-l" %></h4>
@@ -12,21 +12,18 @@
       <span class="button btn-middle" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
       <span class="button btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
     </div>
-    <div class="main-content">
-      <h1>Welcome to my portfolio !</h1>
-      <div class="d-flex justify-content-around">
-        <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
-        <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
-        <%= image_tag "RemLul2.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul2" } %>
-      </div>
+    <div class="main-content text-center">
+      <h1>Rémi Tondeux</h1>
+      <h2 id="job-title"></h2>
+      <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
+      <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
       <div class="card-classic" data-change-mode-target="card">
         <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
         <% 7.times do %>
           <p><%= "#{lorem}" %></p>
-          <p><i class="fas fa-lemon"></i></p>
         <% end  %>
       </div>
-      <%= image_tag "banana.png", class: "juke", data: { change_mode_target: "juke" } %>
+      <%= image_tag "banana.png", class: "juke mt-2 d-none", data: { change_mode_target: "juke" } %>
     </div>
   </div>
 </div>
