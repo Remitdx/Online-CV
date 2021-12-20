@@ -20,11 +20,14 @@
   }
 }
 
-
-.fa-lemon {
+.juke {
   position: absolute;
   top: 500px;
   right: 350px;
-  font-size: 40px;
-  color: $banana;
+  height: 100px;
+  }
+
+.juke:hover {
+    height: 300px;
+    transition-delay:2s;
 }
