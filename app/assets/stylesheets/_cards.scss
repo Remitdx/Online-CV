@@ -1,23 +1,23 @@
 .card-classic {
-  background-color: white;
+  background-color: $blue-2;
   border-radius: 8px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   padding: 16px;
 }
 
 .card-dark {
-  background-color: #292929;
+  background-color: $black-1;
   border-radius: 8px;
-  box-shadow: 0 0 3px rgba(255 , 255, 255, 0.4);
+  box-shadow: 0 0 3px $white-1 ;
   padding: 16px;
   p {
-    color: white;
+    color: $white-1;
   }
 }
 
 .card-funky {
-  background-color: rgba($color: #FD96DD, $alpha: 0.8);
+  background-color: rgba($pink, $alpha: 0.9);
   border-radius: 8px;
-  box-shadow: 0 0 3px rgb(241, 234, 74);
+  box-shadow: 0 0 3px $banana;
   padding: 16px;
 }

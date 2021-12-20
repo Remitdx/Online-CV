@@ -1,12 +1,15 @@
 .body-classic{
-  background-color: #FFFFFF;
+  background-color: $blue-1;
 }
 
 .body-dark{
-  background-color: #424242;
+  background-color: $black-2;
 }
 
 .body-funky{
   background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(https://static-mapetitemercerie.o10c.net/126420-thickbox_default/-coupon-250-cm-x-110-cm-tissu-coton-a-carreaux-janis-noirvert.jpg);
   background-position: center;
+  h1 {
+      color: $banana;
+  }
 }
