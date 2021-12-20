@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'lul2'];
+  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'lul2', 'card'];
 
   classic(event) {
     this.classicTarget.classList.add("btn-darky");
@@ -16,6 +16,9 @@ export default class extends Controller {
     this.bodyTarget.classList.add("body-classic");
     this.bodyTarget.classList.remove("body-dark");
     this.bodyTarget.classList.remove("body-funky");
+    this.cardTarget.classList.add("card-classic");
+    this.cardTarget.classList.remove("card-dark");
+    this.cardTarget.classList.remove("card-funky");
   }
 
   dark(event) {
@@ -31,7 +34,9 @@ export default class extends Controller {
     this.bodyTarget.classList.remove("body-classic");
     this.bodyTarget.classList.add("body-dark");
     this.bodyTarget.classList.remove("body-funky");
-
+    this.cardTarget.classList.remove("card-classic");
+    this.cardTarget.classList.add("card-dark");
+    this.cardTarget.classList.remove("card-funky");
   }
 
   funky(event) {
@@ -47,5 +52,8 @@ export default class extends Controller {
     this.bodyTarget.classList.remove("body-classic");
     this.bodyTarget.classList.remove("body-dark");
     this.bodyTarget.classList.add("body-funky");
+    this.cardTarget.classList.remove("card-classic");
+    this.cardTarget.classList.remove("card-dark");
+    this.cardTarget.classList.add("card-funky");
   }
 }

@@ -1,0 +1,23 @@
+.card-classic {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  padding: 16px;
+}
+
+.card-dark {
+  background-color: #292929;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(255 , 255, 255, 0.4);
+  padding: 16px;
+  p {
+    color: white;
+  }
+}
+
+.card-funky {
+  background-color: rgba($color: #FD96DD, $alpha: 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgb(241, 234, 74);
+  padding: 16px;
+}
