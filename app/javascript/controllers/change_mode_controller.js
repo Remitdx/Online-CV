@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke', 'about', 'projects', 'contact'];
+  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke', 'home', 'projects', 'contact'];
 
   classic(event) {
     this.classicTarget.classList.add("btn-darky");
@@ -58,11 +58,11 @@ export default class extends Controller {
   }
 
   home(event) {
-    this.bodyTarget.scrollIntoView({ behavior: "smooth"});
+    this.homeTarget.scrollIntoView({ behavior: "smooth"});
   }
 
   about(event) {
-    this.aboutTarget.scrollIntoView({ behavior: "smooth" });
+    this.bodyTarget.scrollIntoView({ behavior: "smooth" });
   }
 
   projects(event) {

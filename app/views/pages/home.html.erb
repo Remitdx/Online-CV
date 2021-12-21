@@ -1,4 +1,4 @@
-<div class="body-classic" data-controller="change-mode" data-change-mode-target="body">
+<div data-controller="change-mode" data-change-mode-target="home">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container justify-content-around">
       <div class="d-flex">
@@ -18,30 +18,34 @@
       <h2 id="job-title"></h2>
     </div>
   </div>
-  <div class="container" data-change-mode-target="about">
-
-    <div class="main-content text-center">
-      <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
-      <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
-      <div class="card-classic" data-change-mode-target="card">
-        <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
-        <% 8.times do %>
-          <p><%= "#{lorem}" %></p>
-        <% end  %>
+  <div class="body-classic" data-change-mode-target="body">
+    <div class="container">
+      <h3>About Rémi Tondeux</h3>
+      <div class="text-center">
+        <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
+        <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
+        <div class="card-classic" data-change-mode-target="card">
+          <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
+          <% 8.times do %>
+            <p><%= "#{lorem}" %></p>
+          <% end  %>
+        </div>
+        <div data-change-mode-target="projects">
+          <h3>this is project section</h3>
+          <div>
+            <% 8.times do %>
+            <p><%= "#{lorem}" %></p>
+            <% end  %>
+          </div>
+        </div>
+        <div data-change-mode-target="contact">
+          <h3>this is contact section</h3>
+          <% 8.times do %>
+            <p><%= "#{lorem}" %></p>
+          <% end  %>
+        </div>
+        <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
       </div>
-      <div class="py-4" data-change-mode-target="projects">
-        <h3>this is project section</h3>
-        <% 8.times do %>
-          <p><%= "#{lorem}" %></p>
-        <% end  %>
-      </div>
-      <div class="py-4" data-change-mode-target="contact">
-        <h3>this is contact section</h3>
-        <% 8.times do %>
-          <p><%= "#{lorem}" %></p>
-        <% end  %>
-      </div>
-      <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
     </div>
   </div>
 </div>
