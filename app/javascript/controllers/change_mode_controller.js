@@ -15,9 +15,9 @@ export default class extends Controller {
     this.bodyTarget.classList.add("body-classic");
     this.bodyTarget.classList.remove("body-dark");
     this.bodyTarget.classList.remove("body-funky");
-    this.cardTarget.classList.add("card-classic");
-    this.cardTarget.classList.remove("card-dark");
-    this.cardTarget.classList.remove("card-funky");
+    this.cardTargets.forEach(card => card.classList.add("card-classic"));
+    this.cardTargets.forEach(card => card.classList.remove("card-dark"));
+    this.cardTargets.forEach(card => card.classList.remove("card-funky"));
     this.jukeTarget.classList.add("d-none");
   }
 
@@ -33,9 +33,9 @@ export default class extends Controller {
     this.bodyTarget.classList.remove("body-classic");
     this.bodyTarget.classList.add("body-dark");
     this.bodyTarget.classList.remove("body-funky");
-    this.cardTarget.classList.remove("card-classic");
-    this.cardTarget.classList.add("card-dark");
-    this.cardTarget.classList.remove("card-funky");
+    this.cardTargets.forEach(card => card.classList.remove("card-classic"));
+    this.cardTargets.forEach(card => card.classList.add("card-dark"));
+    this.cardTargets.forEach(card => card.classList.remove("card-funky"));
     this.jukeTarget.classList.add("d-none");
   }
 
@@ -51,9 +51,9 @@ export default class extends Controller {
     this.bodyTarget.classList.remove("body-classic");
     this.bodyTarget.classList.remove("body-dark");
     this.bodyTarget.classList.add("body-funky");
-    this.cardTarget.classList.remove("card-classic");
-    this.cardTarget.classList.remove("card-dark");
-    this.cardTarget.classList.add("card-funky");
+    this.cardTargets.forEach (card => card.classList.remove("card-classic"));
+    this.cardTargets.forEach (card => card.classList.remove("card-dark"));
+    this.cardTargets.forEach (card => card.classList.add("card-funky"));
     this.jukeTarget.classList.remove("d-none");
   }
 
