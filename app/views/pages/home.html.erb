@@ -7,18 +7,19 @@
       <h4><%= link_to "Contact", root_path(:anchor => "contact"), class: "nav-l" %></h4>
     </div>
   </div>
-  <div class="banner">
-
+  <div class="banner d-flex align-items-start flex-column justify-content-center">
+    <div class="p-5">
+      <h1>Rémi Tondeux</h1>
+      <h2 id="job-title"></h2>
+    </div>
   </div>
-  <div class="container">
+  <div class="container" id="about">
     <div class="d-flex py-4">
       <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Classic</span>
       <span class="button btn-middle" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
       <span class="button btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
     </div>
-    <div class="main-content text-center" id="about">
-      <h1>Rémi Tondeux</h1>
-      <h2 id="job-title"></h2>
+    <div class="main-content text-center">
       <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
       <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
       <div class="card-classic" data-change-mode-target="card">
