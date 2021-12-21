@@ -1,10 +1,15 @@
-<div class="body-classic" data-controller="change-mode" data-change-mode-target="body">
+<div data-controller="change-mode" data-change-mode-target="home">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container justify-content-around">
-      <h3><%= link_to "Home", root_path, class: "nav-l" %></h3>
-      <h3><%= link_to "About me", root_path(:anchor => "about"), class: "nav-l" %></h3>
-      <h3><%= link_to "Projects", root_path(:anchor => "project"), class: "nav-l" %></h3>
-      <h3><%= link_to "Contact", root_path(:anchor => "contact"), class: "nav-l" %></h3>
+      <div class="d-flex">
+        <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
+        <span class="button btn-middle" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
+        <span class="button btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
+      </div>
+      <h4 data-action="click->change-mode#home">Home</h4>
+      <h4 data-action="click->change-mode#about">About me</h4>
+      <h4 data-action="click->change-mode#projects">Projects</h4>
+      <h4 data-action="click->change-mode#contact">Contact</h4>
     </div>
   </div>
   <div class="banner d-flex align-items-start flex-column justify-content-center">
@@ -13,28 +18,34 @@
       <h2 id="job-title"></h2>
     </div>
   </div>
-  <div class="container" id="about">
-    <div class="d-flex py-4">
-      <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Classic</span>
-      <span class="button btn-middle" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
-      <span class="button btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
-    </div>
-    <div class="main-content text-center">
-      <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
-      <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
-      <div class="card-classic" data-change-mode-target="card">
-        <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
-        <% 7.times do %>
-          <p><%= "#{lorem}" %></p>
-        <% end  %>
+  <div class="body-classic" data-change-mode-target="body">
+    <div class="container">
+      <h3>About Rémi Tondeux</h3>
+      <div class="text-center">
+        <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
+        <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
+        <div class="card-classic" data-change-mode-target="card">
+          <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
+          <% 8.times do %>
+            <p><%= "#{lorem}" %></p>
+          <% end  %>
+        </div>
+        <div data-change-mode-target="projects">
+          <h3>this is project section</h3>
+          <div>
+            <% 8.times do %>
+            <p><%= "#{lorem}" %></p>
+            <% end  %>
+          </div>
+        </div>
+        <div data-change-mode-target="contact">
+          <h3>this is contact section</h3>
+          <% 8.times do %>
+            <p><%= "#{lorem}" %></p>
+          <% end  %>
+        </div>
+        <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
       </div>
-      <div class="card-classic" data-change-mode-target="card" id="project">
-        <h3>this is project section</h3>
-      </div>
-      <div class="card-classic" data-change-mode-target="card" id="contact">
-        <h3>this is contact section</h3>
-      </div>
-      <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
     </div>
   </div>
 </div>
