@@ -1,10 +1,14 @@
 <div class="body-classic" data-controller="change-mode" data-change-mode-target="body">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container justify-content-around">
-      <h4><%= link_to "Menu", "#", class: "nav-l" %></h4>
-      <h4><%= link_to "Projects", "#", class: "nav-l" %></h4>
-      <h4><%= link_to "Contact", "#", class: "nav-l" %></h4>
+      <h4><%= link_to "Home", root_path, class: "nav-l" %></h4>
+      <h4><%= link_to "About me", root_path(:anchor => "about"), class: "nav-l" %></h4>
+      <h4><%= link_to "Projects", root_path(:anchor => "project"), class: "nav-l" %></h4>
+      <h4><%= link_to "Contact", root_path(:anchor => "contact"), class: "nav-l" %></h4>
     </div>
+  </div>
+  <div class="banner">
+
   </div>
   <div class="container">
     <div class="d-flex py-4">
@@ -12,7 +16,7 @@
       <span class="button btn-middle" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
       <span class="button btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
     </div>
-    <div class="main-content text-center">
+    <div class="main-content text-center" id="about">
       <h1>Rémi Tondeux</h1>
       <h2 id="job-title"></h2>
       <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
@@ -22,6 +26,12 @@
         <% 7.times do %>
           <p><%= "#{lorem}" %></p>
         <% end  %>
+      </div>
+      <div class="card-classic" data-change-mode-target="card" id="project">
+        <h4>this is project section</h4>
+      </div>
+      <div class="card-classic" data-change-mode-target="card" id="contact">
+        <h4>this is contact section</h4>
       </div>
       <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
     </div>
