@@ -32,17 +32,21 @@
         </div>
         <div data-change-mode-target="projects">
           <h3>this is project section</h3>
-          <div>
+          <% @projects.each do |project| %>
+            <div class="card-classic" data-change-mode-target="card">
+              <%= project.title %>
+              <%= project.start %>
+              <%= project.description %>
+            </div>
+          <% end  %>
+        </div>
+        <div data-change-mode-target="contact">
+          <h3>this is contact section</h3>
+          <div class="card-classic" data-change-mode-target="card">
             <% 8.times do %>
             <p><%= "#{lorem}" %></p>
             <% end  %>
           </div>
-        </div>
-        <div data-change-mode-target="contact">
-          <h3>this is contact section</h3>
-          <% 8.times do %>
-            <p><%= "#{lorem}" %></p>
-          <% end  %>
         </div>
         <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
       </div>
