@@ -1,12 +1,12 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke'];
+  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke', 'about', 'projects', 'contact'];
 
   classic(event) {
     this.classicTarget.classList.add("btn-darky");
     this.darkTarget.classList.remove("btn-darky");
-    this.funkyTarget.classList.remove("btn-banana");
+    this.funkyTarget.classList.remove("btn-darky");
     this.navigateTarget.classList.remove("navigate-funky");
     this.navigateTarget.classList.remove("navigate-dark");
     this.navigateTarget.classList.add("navigate-classic");
@@ -24,7 +24,7 @@ export default class extends Controller {
   dark(event) {
     this.classicTarget.classList.remove("btn-darky");
     this.darkTarget.classList.add("btn-darky");
-    this.funkyTarget.classList.remove("btn-banana");
+    this.funkyTarget.classList.remove("btn-darky");
     this.navigateTarget.classList.remove("navigate-funky");
     this.navigateTarget.classList.add("navigate-dark");
     this.navigateTarget.classList.remove("navigate-classic");
@@ -42,7 +42,7 @@ export default class extends Controller {
   funky(event) {
     this.classicTarget.classList.remove("btn-darky");
     this.darkTarget.classList.remove("btn-darky");
-    this.funkyTarget.classList.add("btn-banana");
+    this.funkyTarget.classList.add("btn-darky");
     this.navigateTarget.classList.add("navigate-funky");
     this.navigateTarget.classList.remove("navigate-dark");
     this.navigateTarget.classList.remove("navigate-classic");
@@ -55,5 +55,21 @@ export default class extends Controller {
     this.cardTarget.classList.remove("card-dark");
     this.cardTarget.classList.add("card-funky");
     this.jukeTarget.classList.remove("d-none");
+  }
+
+  home(event) {
+    this.bodyTarget.scrollIntoView({ behavior: "smooth"});
+  }
+
+  about(event) {
+    this.aboutTarget.scrollIntoView({ behavior: "smooth" });
+  }
+
+  projects(event) {
+    this.projectsTarget.scrollIntoView({ behavior: "smooth" });
+  }
+
+  contact(event) {
+    this.contactTarget.scrollIntoView({ behavior: "smooth" });
   }
 }
