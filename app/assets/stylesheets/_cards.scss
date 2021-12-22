@@ -1,23 +1,38 @@
 .card-classic {
   background-color: $blue-2;
   border-radius: 8px;
-  border: 1px solid $blue-4;
+  box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: 0.8);
   padding: 16px;
+  overflow: hidden;
 }
 
 .card-dark {
   background-color: $black-2;
   border-radius: 8px;
-  border: 1px solid $grey-1;
+  box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: 0.8);
   padding: 16px;
+  overflow: hidden;
 }
 
 .card-funky {
   background: linear-gradient(30deg, $banana, $pink);
   border-radius: 8px;
-  box-shadow: 0 0 3px $banana;
+  box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: 0.8);
   padding: 16px;
+  overflow: hidden;
 }
 
-.card-project {
+.effect-purpose {
+  position: relative;
+  height: 400px;
+  .card-project {
+    position:absolute;
+    top:20px;
+    height:360px;
+    transition: all 0.3s ease;
+    &:hover{
+      top:0;
+      height:400px;
+    }
+  }
 }
