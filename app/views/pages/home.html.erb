@@ -26,7 +26,7 @@
         <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
         <div class="card-classic" data-change-mode-target="card">
           <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
-          <% 8.times do %>
+          <% 4.times do %>
             <p><%= "#{lorem}" %></p>
           <% end  %>
         </div>
@@ -43,12 +43,11 @@
         <div data-change-mode-target="contact">
           <h3>this is contact section</h3>
           <div class="card-classic" data-change-mode-target="card">
-            <% 8.times do %>
-            <p><%= "#{lorem}" %></p>
-            <% end  %>
+            <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <i class="far fa-envelope"> : remi.tondeux@gmail.com</i>
           </div>
         </div>
-        <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
       </div>
     </div>
   </div>
