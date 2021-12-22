@@ -1,6 +1,6 @@
 <div data-controller="change-mode" data-change-mode-target="home">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
-    <div class="d-flex container align-items-center justify-content-around">
+    <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
         <span class="button btn-middle" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
@@ -20,35 +20,42 @@
   </div>
   <div class="body-classic" data-change-mode-target="body">
     <div class="container">
-      <h3>About Rémi Tondeux</h3>
       <div class="text-center">
-        <%= image_tag "RemBG_2.jpg", class: "avatar my-3", data: { change_mode_target: "bg" } %>
-        <%= image_tag "RemLul.jpg", class: "avatar my-3 d-none", data: { change_mode_target: "lul" } %>
+        <h3>Rémi Tondeux - 30 years old - engineer and Web developer</h3>
+        <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg" } %>
+        <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul" } %>
         <div class="card-classic" data-change-mode-target="card">
           <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
-          <% 8.times do %>
+          <% 4.times do %>
             <p><%= "#{lorem}" %></p>
           <% end  %>
         </div>
         <div data-change-mode-target="projects">
-          <h3>this is project section</h3>
-          <% @projects.each do |project| %>
-            <div class="card-classic" data-change-mode-target="card">
-              <%= project.title %>
-              <%= project.start %>
-              <%= project.description %>
-            </div>
-          <% end  %>
-        </div>
-        <div data-change-mode-target="contact">
-          <h3>this is contact section</h3>
-          <div class="card-classic" data-change-mode-target="card">
-            <% 8.times do %>
-            <p><%= "#{lorem}" %></p>
+          <h3>Discover my projects</h3>
+          <p>Because I really care about work-life balance, you will find here both personal and professional projects.
+            Everything here define who I am and gave me technical or soft skills.
+            Feel free to sort them using the tags below.</p>
+          <div class="row">
+            <% @projects.each do |project| %>
+              <div class="col-12 col-lg-4">
+                <div class="card-classic card-project" data-change-mode-target="card">
+                  <h4><%= project.title %></h4>
+                  <p><%= project.start %></p>
+                  <p><%= project.description %></p>
+                </div>
+              </div>
             <% end  %>
           </div>
         </div>
-        <%= image_tag "banana.png", class: "juke d-none", data: { change_mode_target: "juke" } %>
+        <div data-change-mode-target="contact">
+          <h3>Get in touch with me</h3>
+          <p> <%= lorem  %> <p>
+          <div class="card-classic" data-change-mode-target="card">
+            <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

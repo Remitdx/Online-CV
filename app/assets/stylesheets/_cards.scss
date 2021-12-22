@@ -10,9 +10,6 @@
   border-radius: 8px;
   border: 1px solid $grey-1;
   padding: 16px;
-  p {
-    color: $grey-1;
-  }
 }
 
 .card-funky {
@@ -20,4 +17,7 @@
   border-radius: 8px;
   box-shadow: 0 0 3px $banana;
   padding: 16px;
+}
+
+.card-project {
 }
