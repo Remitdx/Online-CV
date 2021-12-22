@@ -1,5 +1,7 @@
 .button {
-  background-color: rgba($color: #d8d8d8, $alpha: 1.0) ;
+  background-color: rgba($color: #ffffff, $alpha: 0.5) ;
+  border: 2px rgba($color: #dfdfdf, $alpha: 0.8) solid;
+  width: 75px;
   text-align: center;
   padding: 6px 4px;
   cursor: pointer;
@@ -11,22 +13,9 @@
 }
 
 .btn-left {
-  width: 70px;
-  border: 1px white solid;
   border-radius: 6px 0 0 6px;
-  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 1.0);
-}
-
-.btn-middle {
-  width: 70px;
-  border: 1px white solid;
-  border-radius: 0 0 0 0;
-  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 1.0);
 }
 
 .btn-right {
-  width: 70px;
-  border: 1px white solid;
   border-radius: 0 6px 6px 0;
-  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 1.0);
 }
