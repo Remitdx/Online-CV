@@ -38,10 +38,12 @@
           <div class="row">
             <% @projects.each do |project| %>
               <div class="col-12 col-lg-4">
-                <div class="card-classic card-project" data-change-mode-target="card">
-                  <h4><%= project.title %></h4>
-                  <p><%= project.start %></p>
-                  <p><%= project.description %></p>
+                <div class="effect-purpose">
+                  <div class="card-classic card-project" data-change-mode-target="card">
+                    <h4><%= project.title %></h4>
+                    <p><%= project.start %></p>
+                    <p><%= project.description %></p>
+                  </div>
                 </div>
               </div>
             <% end  %>
