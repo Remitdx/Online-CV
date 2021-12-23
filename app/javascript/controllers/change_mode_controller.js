@@ -7,6 +7,9 @@ export default class extends Controller {
     this.classicTarget.classList.add("btn-darky");
     this.darkTarget.classList.remove("btn-darky");
     this.funkyTarget.classList.remove("btn-darky");
+    this.classicTarget.classList.remove("btn-light");
+    this.darkTarget.classList.add("btn-light");
+    this.funkyTarget.classList.add("btn-light");
     this.navigateTarget.classList.remove("navigate-funky");
     this.navigateTarget.classList.remove("navigate-dark");
     this.navigateTarget.classList.add("navigate-classic");
@@ -25,6 +28,9 @@ export default class extends Controller {
     this.classicTarget.classList.remove("btn-darky");
     this.darkTarget.classList.add("btn-darky");
     this.funkyTarget.classList.remove("btn-darky");
+    this.classicTarget.classList.add("btn-light");
+    this.darkTarget.classList.remove("btn-light");
+    this.funkyTarget.classList.add("btn-light");
     this.navigateTarget.classList.remove("navigate-funky");
     this.navigateTarget.classList.add("navigate-dark");
     this.navigateTarget.classList.remove("navigate-classic");
@@ -43,6 +49,9 @@ export default class extends Controller {
     this.classicTarget.classList.remove("btn-darky");
     this.darkTarget.classList.remove("btn-darky");
     this.funkyTarget.classList.add("btn-darky");
+    this.classicTarget.classList.add("btn-light");
+    this.darkTarget.classList.add("btn-light");
+    this.funkyTarget.classList.remove("btn-light");
     this.navigateTarget.classList.add("navigate-funky");
     this.navigateTarget.classList.remove("navigate-dark");
     this.navigateTarget.classList.remove("navigate-classic");
