@@ -24,15 +24,15 @@
 
 .effect-purpose {
   position: relative;
-  height: 400px;
+  height: 350px;
   .card-project {
     position:absolute;
-    top:20px;
-    height:360px;
+    top: 15px;
+    height: 320px;
     transition: all 0.3s ease;
     &:hover{
       top:0;
-      height:400px;
+      height:350px;
     }
   }
 }
