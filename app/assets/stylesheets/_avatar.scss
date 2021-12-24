@@ -2,10 +2,15 @@
   width: 300px;
   border-radius: 50%;
   border: 6px solid white;
-
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
-.avatar:hover{
+
+.turn-left {
+ transition: transform 0.8s;
+  transform-style: preserve-3d;
   transform: rotateY(180deg);
+}
+
+.reset {
+ transition: transform 0.8s;
+  transform-style: preserve-3d;
 }

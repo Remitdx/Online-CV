@@ -1,4 +1,4 @@
-<div data-controller="change-mode" data-change-mode-target="home">
+<div data-controller="navigation change-mode" data-navigation-target="home">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
@@ -6,62 +6,62 @@
         <span class="button btn-light" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
       </div>
-      <h4 data-action="click->change-mode#home">Home</h4>
-      <h4 data-action="click->change-mode#about">About me</h4>
-      <h4 data-action="click->change-mode#projects">Projects</h4>
-      <h4 data-action="click->change-mode#contact">Contact</h4>
+      <h4 data-action="click->navigation#home">Home</h4>
+      <h4 data-action="click->navigation#about">About me</h4>
+      <h4 data-action="click->navigation#projects">Projects</h4>
+      <h4 data-action="click->navigation#contact">Contact</h4>
     </div>
   </div>
   <div class="banner d-flex align-items-start flex-column justify-content-center pl-5">
     <h1>Rémi Tondeux</h1>
     <h2 id="job-title"></h2>
-    <span class="btn-home" data-action="click->change-mode#contact">Let's work together !</span>
+    <span class="btn-home" data-action="click->navigation#contact">Let's work together !</span>
   </div>
-  <div class="body-classic" data-change-mode-target="body">
+  <div class="body-classic" data-change-mode-target="body" data-navigation-target="body">
     <div class="container">
-      <div class="text-center">
+      <div class="text-center" data-controller="return-pic" data-action="mousemove->return-pic#return">
         <h3>Rémi Tondeux - 30 years old - engineer and Web developer</h3>
-        <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg" } %>
-        <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul" } %>
+        <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
+        <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
         <div class="card-classic" data-change-mode-target="card">
           <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
-          <% 4.times do %>
+          <% 2.times do %>
             <p><%= "#{lorem}" %></p>
           <% end  %>
         </div>
-        <div class="row">
-          <div class="col-6 col-lg-1">
+        <div class="row justify-content-center logos">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Ruby.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Rails.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "JS.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "HTML.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "CSS.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Cplus.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Python.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Git.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Github.png", class: "logo" %>
           </div>
-          <div class="col-6 col-lg-1">
+          <div class="col-4 col-lg-1">
             <%= image_tag "Figma.png", class: "logo" %>
           </div>
         </div>
-        <div data-change-mode-target="projects">
+        <div data-navigation-target="projects">
           <h3>Discover my projects</h3>
           <p>Because I really care about work-life balance, you will find here both personal and professional projects.
             Everything here define who I am and gave me technical or soft skills.
@@ -80,7 +80,7 @@
             <% end  %>
           </div>
         </div>
-        <div data-change-mode-target="contact">
+        <div data-navigation-target="contact">
           <h3>Get in touch with me</h3>
           <p> <%= lorem  %> <p>
           <div class="card-classic" data-change-mode-target="card">

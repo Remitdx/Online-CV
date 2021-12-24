@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke', 'home', 'projects', 'contact'];
+  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke'];
 
   classic(event) {
     this.classicTarget.classList.add("btn-darky");
@@ -21,7 +21,6 @@ export default class extends Controller {
     this.cardTargets.forEach(card => card.classList.add("card-classic"));
     this.cardTargets.forEach(card => card.classList.remove("card-dark"));
     this.cardTargets.forEach(card => card.classList.remove("card-funky"));
-    this.jukeTarget.classList.add("d-none");
   }
 
   dark(event) {
@@ -42,7 +41,6 @@ export default class extends Controller {
     this.cardTargets.forEach(card => card.classList.remove("card-classic"));
     this.cardTargets.forEach(card => card.classList.add("card-dark"));
     this.cardTargets.forEach(card => card.classList.remove("card-funky"));
-    this.jukeTarget.classList.add("d-none");
   }
 
   funky(event) {
@@ -63,22 +61,5 @@ export default class extends Controller {
     this.cardTargets.forEach (card => card.classList.remove("card-classic"));
     this.cardTargets.forEach (card => card.classList.remove("card-dark"));
     this.cardTargets.forEach (card => card.classList.add("card-funky"));
-    this.jukeTarget.classList.remove("d-none");
-  }
-
-  home(event) {
-    this.homeTarget.scrollIntoView({ behavior: "smooth"});
-  }
-
-  about(event) {
-    this.bodyTarget.scrollIntoView({ behavior: "smooth" });
-  }
-
-  projects(event) {
-    this.projectsTarget.scrollIntoView({ behavior: "smooth" });
-  }
-
-  contact(event) {
-    this.contactTarget.scrollIntoView({ behavior: "smooth" });
   }
 }
