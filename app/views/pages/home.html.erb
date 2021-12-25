@@ -64,16 +64,19 @@
         <div data-navigation-target="projects">
           <h3>Discover my projects</h3>
           <p>Because I really care about work-life balance, you will find here both personal and professional projects.
-            Everything here define who I am and gave me technical or soft skills.
+            Everything here define who I am and gave me either technical or soft skills.
             Feel free to sort them using the tags below.</p>
           <div class="row">
             <% @projects.each do |project| %>
               <div class="col-12 col-lg-4">
-                <div class="effect-purpose">
-                  <div class="card-classic card-project" data-change-mode-target="card">
+                <div class="effect-purpose reset" data-controller="projects" data-action="click->projects#return" data-projects-target="card">
+                  <div class="card-classic card-project-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.pic %>')" data-change-mode-target="card">
+                    <h4><%= project.title %></h4>
+                  </div>
+                  <div class="card-classic card-project-back" data-change-mode-target="card">
                     <h4><%= project.title %></h4>
                     <p><%= project.start %></p>
-                    <p><%= project.description %></p>
+                    <p><%= project.description.size > 300 ? project.description.slice!(0..300) + " [...]" : project.description %></p>
                   </div>
                 </div>
               </div>

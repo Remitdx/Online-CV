@@ -5,12 +5,14 @@
 }
 
 .turn-left {
- transition: transform 0.8s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
 }
 
 .reset {
- transition: transform 0.8s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
+
+// take care, .reset is also used for the flip-card effect !
