@@ -1,67 +1,274 @@
 import { Controller } from "stimulus";
 
+
+
 export default class extends Controller {
-  static targets = ['cards', 'tags','all', 'pro', 'web', 'social', 'lifestyle', 'perso', 'award', 'study', 'sport', 'env']
+  static targets = ['tags','all', 'pro', 'web', 'social', 'lifestyle', 'perso', 'award', 'study', 'sport', 'env']
 
   all(event) {
-    console.log(this.allTarget.innerText);
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
   }
   pro(event) {
-    console.log(this.proTarget.innerText);
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.proTarget.classList.toggle("underline");
+    const pro = this.proTarget.innerText.split("#")[1].toLowerCase();
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === pro) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
+      }
+    });
   }
 
   web(event) {
-    let hide = false;
+    this.proTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.webTarget.classList.toggle("underline");
     const web = this.webTarget.innerText.split("#")[1].toLowerCase();
-    const tags = this.tagsTarget.innerText.split(" ");
-    tags.forEach(tag => { if (tag === web) {
-      hide = true;
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === web) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
       }
     });
-    console.log(hide);
   }
 
   social(event) {
-    console.log(this.socialTarget.innerText);
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.socialTarget.classList.toggle("underline");
+    const social = this.socialTarget.innerText.split("#")[1].toLowerCase();
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === social) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
+      }
+    });
   }
 
   lifestyle(event) {
-    let hide = false;
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.lifestyleTarget.classList.toggle("underline");
     const lifestyle = this.lifestyleTarget.innerText.split("#")[1].toLowerCase();
-    const tags = this.tagsTarget.innerText.split(" ");
-    tags.forEach(tag => {
-      if (tag === lifestyle) {
-        hide = true;
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === lifestyle) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
       }
     });
-    console.log(hide);
   }
 
   perso(event) {
-    console.log(this.persoTarget.innerText);
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.persoTarget.classList.toggle("underline");
+    const perso = this.persoTarget.innerText.split("#")[1].toLowerCase();
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === perso) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
+      }
+    });
   }
 
   award(event) {
-    console.log(this.awardTarget.innerText);
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.awardTarget.classList.toggle("underline");
+    const award = this.awardTarget.innerText.split("#")[1].toLowerCase();
+    const tags = this.tagsTargets.forEach(tag => {
+      console.log(tag);
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === award) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
+      }
+    });
   }
 
   study(event) {
-    console.log(this.studyTarget.innerText);
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.studyTarget.classList.toggle("underline");
+    const study = this.studyTarget.innerText.split("#")[1].toLowerCase();
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === study) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
+      }
+    });
   }
 
   sport(event) {
-    let hide = false;
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.envTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.sportTarget.classList.toggle("underline");
     const sport = this.sportTarget.innerText.split("#")[1].toLowerCase();
-    const tags = this.tagsTarget.innerText.split(" ");
-    tags.forEach(tag => {
-      if (tag === sport) {
-        hide = true;
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === sport) {
+        display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
       }
     });
-    console.log(hide);
   }
 
   env(event) {
-    console.log(this.envTarget.innerText);
+    this.proTarget.classList.remove("underline");
+    this.webTarget.classList.remove("underline");
+    this.socialTarget.classList.remove("underline");
+    this.lifestyleTarget.classList.remove("underline");
+    this.persoTarget.classList.remove("underline");
+    this.awardTarget.classList.remove("underline");
+    this.studyTarget.classList.remove("underline");
+    this.sportTarget.classList.remove("underline");
+    this.tagsTargets.forEach(tag => {
+      tag.parentNode.parentNode.parentNode.classList.remove("d-none");
+    });
+    this.envTarget.classList.toggle("underline");
+    const env = this.envTarget.innerText.split("#")[1].toLowerCase();
+    const tags = this.tagsTargets.forEach(tag => {
+      const arrayTags = tag.innerText.split(" ");
+      let display = false;
+      arrayTags.forEach(tag => {
+        if (tag === env) {
+          display = true;
+        }
+      });
+      if (display !== true) {
+        tag.parentNode.parentNode.parentNode.classList.toggle("d-none");
+      }
+    });
   }
 }
