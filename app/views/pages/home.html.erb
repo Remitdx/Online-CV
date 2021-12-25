@@ -61,28 +61,36 @@
             <%= image_tag "Figma.png", class: "logo" %>
           </div>
         </div>
-        <div data-navigation-target="projects">
+        <div data-controller="filter" data-navigation-target="projects">
           <h3>Discover my projects</h3>
           <p>Because I really care about work-life balance, you will find here both personal and professional projects.
             Everything here define who I am and gave me either technical or soft skills.
             Feel free to sort them using the tags below.</p>
           <div class="tags-container">
             <div class="d-flex justify-content-around align-items-center py-2">
-              <h4>#AllProjects</h4><p>#Professional</p><h6>#Web</h6>
+              <h4 data-filter-target ="all" data-action="click->filter#all">#AllProjects</h4>
+              <p data-filter-target ="pro" data-action="click->filter#pro">#Professional</p>
+              <h6 data-filter-target ="web" data-action="click->filter#web">#Web</h6>
             </div>
             <div class="d-flex justify-content-around align-items-center py-2">
-              <p>#Social</p><h6>#Lifestyle<h6><p>#Personal</p><h4>#Awarded</h4>
+              <p data-filter-target ="social" data-action="click->filter#social">#Social</p>
+              <h6 data-filter-target ="lifestyle" data-action="click->filter#lifestyle">#Lifestyle<h6>
+              <p data-filter-target ="perso" data-action="click->filter#perso">#Personal</p>
+              <h4 data-filter-target ="award" data-action="click->filter#award">#Awarded</h4>
             </div>
             <div class="d-flex justify-content-around align-items-center py-2">
-              <p>#Study</p><h6>#Sport<h6><p>#Environment<p>
+              <p data-filter-target ="study" data-action="click->filter#study">#Study</p>
+              <h6 data-filter-target ="sport" data-action="click->filter#sport">#Sport<h6>
+              <p data-filter-target ="env" data-action="click->filter#env">#Environment<p>
             </div>
           </div>
           <div class="row">
             <% @projects.each do |project| %>
               <div class="col-12 col-lg-4">
-                <div class="effect-purpose reset" data-controller="projects" data-action="click->projects#return" data-projects-target="card">
+                <div class="effect-purpose reset" data-controller="projects" data-action="click->projects#return" data-filter-target="cards" data-projects-target="card">
                   <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= project.pic %>')" data-change-mode-target="card">
                     <h5><%= project.title %></h5>
+                    <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
                   </div>
                   <div class="card-classic card-project-back d-flex justify-content-between flex-column" data-change-mode-target="card">
                     <h4><%= project.title %></h4>
