@@ -66,11 +66,16 @@
           <p>Because I really care about work-life balance, you will find here both personal and professional projects.
             Everything here define who I am and gave me either technical or soft skills.
             Feel free to sort them using the tags below.</p>
-          <div class="tags-container d-flex justify-content-around align-items-center">
-            <span class="btn btn-success">#AllProjects</span><span class="btn btn-success">#Professional</span><span class="btn btn-success">#Web</span>
-            <span class="btn btn-success">#Personal</span><span class="btn btn-success">#Awarded</span><span class="btn btn-success">#Study</span>
-            <span class="btn btn-success">#Sport</span><span class="btn btn-success">#Lifestyle</span><span class="btn btn-success">#Social</span>
-            <span class="btn btn-success">#Environnemnt</span>
+          <div class="tags-container">
+            <div class="d-flex justify-content-around align-items-center py-2">
+              <h4>#AllProjects</h4><p>#Professional</p><h6>#Web</h6>
+            </div>
+            <div class="d-flex justify-content-around align-items-center py-2">
+              <p>#Social</p><h6>#Lifestyle<h6><p>#Personal</p><h4>#Awarded</h4>
+            </div>
+            <div class="d-flex justify-content-around align-items-center py-2">
+              <p>#Study</p><h6>#Sport<h6><p>#Environment<p>
+            </div>
           </div>
           <div class="row">
             <% @projects.each do |project| %>
