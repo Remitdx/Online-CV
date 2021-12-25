@@ -15,7 +15,7 @@
   <div class="banner d-flex align-items-start flex-column justify-content-center pl-5">
     <h1>Rémi Tondeux</h1>
     <h2 id="job-title"></h2>
-    <span class="btn-home" data-action="click->navigation#contact">Let's work together !</span>
+    <span class="btn-call-action" data-action="click->navigation#contact">Let's work together !</span>
   </div>
   <div class="body-classic" data-change-mode-target="body" data-navigation-target="body">
     <div class="container">
@@ -76,7 +76,8 @@
                   <div class="card-classic card-project-back" data-change-mode-target="card">
                     <h4><%= project.title %></h4>
                     <p><%= project.start %></p>
-                    <p><%= project.description.size > 300 ? project.description.slice!(0..300) + " [...]" : project.description %></p>
+                    <p><%= project.description.size > 230 ? project.description.slice!(0..230) + " [...]" : project.description %></p>
+                    <%= link_to "Details", project_path(project), class:"btn-link" %>
                   </div>
                 </div>
               </div>
