@@ -1,4 +1,4 @@
-<div data-controller="navigation change-mode" data-navigation-target="home">
+<div data-controller="navigation change-mode" data-navigation-target="home" data-action="scroll@window->navigation#underline">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
@@ -6,10 +6,10 @@
         <span class="button btn-light" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
       </div>
-      <h4 data-action="click->navigation#home">Home</h4>
-      <h4 data-action="click->navigation#about">About me</h4>
-      <h4 data-action="click->navigation#projects">Projects</h4>
-      <h4 data-action="click->navigation#contact">Contact</h4>
+      <h4 data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h4>
+      <h4 data-navigation-target="aboutBtn" data-action="click->navigation#about">About me</h4>
+      <h4 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h4>
+      <h4 data-navigation-target="contactBtn" data-action="click->navigation#contact">Contact</h4>
     </div>
   </div>
   <div class="banner d-flex align-items-start flex-column justify-content-center pl-5">
@@ -96,7 +96,11 @@
                     <h4><%= project.title %></h4>
                     <p><%= project.description.size > 230 ? project.description.slice!(0..230) + " [...]" : project.description %></p>
                     <div class="text-right pb-2">
-                      <%= link_to "Details", project_path(project), class:"btn-link" %>
+                      <% if project.title = "Our next collaboration"  %>
+                        <span class="btn-link" data-action="click->navigation#contact">Contact</span>
+                      <% else %>
+                        <%= link_to "Details", project_path(project), class:"btn-link" %>
+                      <% end %>
                     </div>
                   </div>
                 </div>
@@ -106,7 +110,7 @@
         </div>
         <div data-navigation-target="contact">
           <h3>Get in touch with me</h3>
-          <p> <%= lorem  %> <p>
+          <p> <%= lorem * 3 %> <p>
           <div class="card-classic" data-change-mode-target="card">
             <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
