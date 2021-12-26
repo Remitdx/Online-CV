@@ -19,11 +19,17 @@
   </div>
   <div class="body-classic" data-change-mode-target="body" data-navigation-target="body">
     <div class="container">
-      <div class="text-center" data-controller="return-pic" data-action="mousemove->return-pic#return">
-        <h3>Rémi Tondeux - 30 years old - engineer and Web developer</h3>
-        <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
-        <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
+      <div data-controller="return-pic" data-action="mousemove->return-pic#return">
+        <div class="text-center">
+          <h3>Rémi Tondeux - 30 years old - engineer and Web developer</h3>
+          <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
+          <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
+        </div>
         <div class="card-classic" data-change-mode-target="card">
+          <div class="game">
+            <h5>Let's play a little game:</h5>
+            <h5>try to discover everything about me !</h5>
+          </div>
           <% lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."  %>
           <% 2.times do %>
             <p><%= lorem %></p>
@@ -89,14 +95,14 @@
               <div class="col-12 col-lg-4">
                 <div class="effect-purpose reset" data-controller="projects" data-action="click->projects#return" data-projects-target="card">
                   <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= project.pic %>')" data-change-mode-target="card">
-                    <h5><%= project.title %></h5>
+                    <h4><%= project.title %></h4>
                     <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
                   </div>
                   <div class="card-classic card-project-back d-flex justify-content-between flex-column" data-change-mode-target="card">
                     <h4><%= project.title %></h4>
                     <p><%= project.description.size > 230 ? project.description.slice!(0..230) + " [...]" : project.description %></p>
                     <div class="text-right pb-2">
-                      <% if project.title = "Our next collaboration"  %>
+                      <% if project.title == "Our next collaboration ?"  %>
                         <span class="btn-link" data-action="click->navigation#contact">Contact</span>
                       <% else %>
                         <%= link_to "Details", project_path(project), class:"btn-link" %>
@@ -112,9 +118,11 @@
           <h3>Get in touch with me</h3>
           <p> <%= lorem * 3 %> <p>
           <div class="card-classic" data-change-mode-target="card">
-            <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
+            <div class="text-center">
+              <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
+            </div>
           </div>
         </div>
       </div>

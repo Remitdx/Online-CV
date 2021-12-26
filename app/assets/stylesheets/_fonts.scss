@@ -9,7 +9,6 @@
 
 
 h1 {
-  letter-spacing: 3px;
   font-family: 'Rock Salt', sans-serif;
 }
 
@@ -19,20 +18,14 @@ h2 {
 
 h3 {
   font-family: 'Heebo', sans-serif;
-  padding-top: 80px;
-  padding-bottom: 24px;
 }
 
 h4 { // for navigation titles
   font-family: 'Rock Salt', sans-serif;
-  cursor: pointer;
 }
 
-h5 { // for card-project titles
-  font-family: 'Rock Salt', sans-serif;
-  font-size: 24px;
-  color: white;
-  text-shadow: 0 0 2px black;
+h5 { // for "about me" game section
+  font-family: 'Press Start 2P', sans-serif;
 }
 
 h6 {
