@@ -96,7 +96,11 @@
                     <h4><%= project.title %></h4>
                     <p><%= project.description.size > 230 ? project.description.slice!(0..230) + " [...]" : project.description %></p>
                     <div class="text-right pb-2">
-                      <%= link_to "Details", project_path(project), class:"btn-link" %>
+                      <% if project.title = "Our next collaboration"  %>
+                        <span class="btn-link" data-action="click->navigation#contact">Contact</span>
+                      <% else %>
+                        <%= link_to "Details", project_path(project), class:"btn-link" %>
+                      <% end %>
                     </div>
                   </div>
                 </div>

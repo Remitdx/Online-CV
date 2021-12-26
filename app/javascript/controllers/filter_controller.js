@@ -1,7 +1,5 @@
 import { Controller } from "stimulus";
 
-
-
 export default class extends Controller {
   static targets = ['tags','all', 'pro', 'web', 'social', 'lifestyle', 'perso', 'award', 'study', 'sport', 'env']
 
