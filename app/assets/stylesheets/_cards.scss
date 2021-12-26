@@ -40,6 +40,12 @@
       top:0;
       height:350px;
     }
+    h4 {
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      text-shadow: 0 0 2px black;
+    }
   }
   .card-project-back {
     position:absolute;
@@ -49,6 +55,10 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    h4 {
+      text-align: center;
+      font-size: 24px;
+    }
   }
 }
 
