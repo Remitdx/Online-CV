@@ -117,6 +117,16 @@
         <div data-navigation-target="contact">
           <h3>Get in touch with me</h3>
           <p> <%= lorem * 3 %> <p>
+          <h3>They trust me</h3>
+          <div class="tags-container">
+            <% @testimonials.each do |testimonial| %>
+              <div class="card-testimonial">
+                <h3><%= testimonial.company %></h3>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %>"</p>
+              </div>
+            <% end %>
+          </div>
           <div class="card-classic" data-change-mode-target="card">
             <div class="text-center">
               <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
