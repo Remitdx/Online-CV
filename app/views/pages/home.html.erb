@@ -118,35 +118,39 @@
           <h3>Get in touch with me</h3>
           <p> <%= lorem * 3 %> <p>
           <h3>They trust me</h3>
-          <div class="d-flex justify-content-between align-items-center py-3" data-controller="carroussel">
-            <% x = @testimonials.length %>
-            <% @testimonials.each do |testimonial| %>
-              <% if testimonial.id % x == 1 %>
-                <div class="card-testimonial card-left" data-carroussel-target="card" data-action="click->carroussel#turnLeft">
-                  <h2><%= testimonial.company %></h2>
-                  <p><%= testimonial.date %></p>
-                  <p>"<%= testimonial.descrition.size > 100 ? testimonial.descrition.slice!(0..100) + " [...]" : testimonial.descrition %> "</p>
-                </div>
-              <% elsif testimonial.id % x == 2  %>
-                <div class="main-card-testimonial" data-carroussel-target="card">
-                  <h2><%= testimonial.company %></h2>
-                  <p><%= testimonial.date %></p>
-                  <p>"<%= testimonial.descrition %> "</p>
-                </div>
-              <% elsif testimonial.id % x == 3 %>
-                <div class="card-testimonial card-right" data-carroussel-target="card" data-action="click->carroussel#turnRight">
-                  <h2><%= testimonial.company %></h2>
-                  <p><%= testimonial.date %></p>
-                  <p>"<%= testimonial.descrition.size > 100 ? testimonial.descrition.slice!(0..100) + " [...]" : testimonial.descrition %> "</p>
-                </div>
-              <% else %>
-                <div class="card-testimonial d-none" data-carroussel-target="card">
-                  <h2><%= testimonial.company %></h2>
-                  <p><%= testimonial.date %></p>
-                  <p>"<%= testimonial.descrition %> "</p>
-                </div>
-              <% end %>
-            <% end  %>
+          <div class="d-flex justify-content-between align-items-center" data-controller="carroussel">
+            <span class="btn btn-primary" data-action="click->carroussel#turnLeft"> < </span>
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <% x = @testimonials.length %>
+              <% @testimonials.each do |testimonial| %>
+                <% if testimonial.id % x == 1 %>
+                  <div class="testimonial card-left" data-carroussel-target="card">
+                    <h2><%= testimonial.company %></h2>
+                    <p><%= testimonial.date %></p>
+                    <p>"<%= testimonial.descrition %> "</p>
+                  </div>
+                <% elsif testimonial.id % x == 2  %>
+                  <div class="main-testimonial" data-carroussel-target="card">
+                    <h2><%= testimonial.company %></h2>
+                    <p><%= testimonial.date %></p>
+                    <p>"<%= testimonial.descrition %> "</p>
+                  </div>
+                <% elsif testimonial.id % x == 3 %>
+                  <div class="testimonial card-right" data-carroussel-target="card">
+                    <h2><%= testimonial.company %></h2>
+                    <p><%= testimonial.date %></p>
+                    <p>"<%= testimonial.descrition %> "</p>
+                  </div>
+                <% else %>
+                  <div class="testimonial d-none" data-carroussel-target="card">
+                    <h2><%= testimonial.company %></h2>
+                    <p><%= testimonial.date %></p>
+                    <p>"<%= testimonial.descrition %> "</p>
+                  </div>
+                <% end %>
+              <% end  %>
+            </div>
+            <span class="btn btn-primary" data-action="click->carroussel#turnRight"> > </span>
           </div>
           <div class="card-classic" data-change-mode-target="card">
             <div class="text-center">

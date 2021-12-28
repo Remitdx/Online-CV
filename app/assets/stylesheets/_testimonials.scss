@@ -1,0 +1,29 @@
+.testimonial {
+  border: 2px solid white;
+  width: 25%;
+  height: 150px;
+  padding: 8px;
+  margin: 0 4px;
+  opacity: 0.7;
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-style: italic;
+  }
+}
+
+.main-testimonial {
+  border: 2px solid red;
+  width: 45%;
+  height: 250px;
+  padding: 8px;
+  margin: 0 4px;
+  h2 {
+    font-size: 22px;
+  }
+  p {
+    font-style: italic;
+  }
+
+}

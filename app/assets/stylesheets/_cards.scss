@@ -69,33 +69,3 @@
 }
 
 // flip-card also need the .reset css class in "avatar" to work nicely
-
-.card-testimonial {
-  border: 2px solid white;
-  width: 20vw;
-  height: 150px;
-  padding: 8px;
-  margin: 0 4px;
-  opacity: 0.7;
-  h2 {
-    font-size: 18px;
-  }
-  p {
-    font-style: italic;
-  }
-}
-
-.main-card-testimonial {
-  border: 2px solid red;
-  width: 35vw;
-  height: 250px;
-  padding: 8px;
-  margin: 0 4px;
-  h2 {
-    font-size: 22px;
-  }
-  p {
-    font-style: italic;
-  }
-
-}
