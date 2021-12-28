@@ -3,4 +3,9 @@ class PagesController < ApplicationController
       @projects = Project.all
       @testimonials = Testimonial.all
   end
+
+  private
+
+  def carroussel
+  end
 end
