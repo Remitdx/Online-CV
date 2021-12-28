@@ -1,0 +1,29 @@
+.testimonial {
+  width: 25%;
+  height: 150px;
+  padding: 8px;
+  margin: 0 8px;
+  opacity: 0.6;
+  text-align: center;
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 9px ;
+    font-style: italic;
+  }
+}
+
+.main-testimonial {
+  width: 40%;
+  height: 250px;
+  padding: 8px;
+  text-align: center;
+  h2 {
+    font-size: 22px;
+  }
+  p {
+    font-style: italic;
+  }
+
+}
