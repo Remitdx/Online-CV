@@ -63,3 +63,19 @@
     text-decoration: none;
   }
 }
+
+.btn-carrou {
+  border-radius: 6px;
+  background-color: rgba($color: #ffffff, $alpha: 0.5) ;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.8) ;
+    i {
+      opacity: 1;
+    }
+  }
+  i {
+    font-size: 40px;
+    opacity: 0.6;
+  }
+}
