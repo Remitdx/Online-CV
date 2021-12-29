@@ -118,8 +118,8 @@
           <h3>Get in touch with me</h3>
           <p> <%= lorem * 3 %> <p>
           <h3>They trust me</h3>
-          <div data-controller="carroussel">
-            <span class="btn btn-primary" data-action="click->carroussel#turnLeft"> < </span>
+          <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
+            <span class="btn btn-carrou" data-action="click->carroussel#turnLeft"> <i class="fas fa-chevron-left"></i> </span>
             <div class="testimonials-container">
               <% x = @testimonials.length %>
               <% @testimonials.each do |testimonial| %>
@@ -162,7 +162,7 @@
                 <% end %>
               <% end  %>
             </div>
-            <span class="btn btn-primary" data-action="click->carroussel#turnRight"> > </span>
+            <span class="btn btn-carrou" data-action="click->carroussel#turnRight"><i class="fas fa-chevron-right"></i></span>
           </div>
           <div class="card-classic" data-change-mode-target="card">
             <div class="text-center">
