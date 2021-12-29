@@ -8,6 +8,8 @@
 
 puts 'Cleaning database...'
 Project.destroy_all # if Rails.env.development?
+Testimonial.destroy_all # if Rails.env.development?
+
 
 puts "Creating my awesome Project !"
 
@@ -19,12 +21,12 @@ project5 = Project.create!(title: "Our next collaboration ?", tags:"awarded prof
 
 puts "create fake testimonial"
 
-testi1 = Testimonial.create!(company: "Fake Company 1", date: "2021", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
-testi2 = Testimonial.create!(company: "Fake Company 2", date: "2022", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
-testi3 = Testimonial.create!(company: "Fake Company 3", date: "2023", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
-testi4 = Testimonial.create!(company: "Fake Company 4", date: "2024", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
-testi5 = Testimonial.create!(company: "Fake Company 5", date: "2025", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
-testi6 = Testimonial.create!(company: "Fake Company 6", date: "2026", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
-testi7 = Testimonial.create!(company: "Fake Company 7", date: "2027", descrition:"working with Rémi was delightful ! What a dedicated and passionnate person. He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
+testi1 = Testimonial.create!(company: "Fake Company 1", date: "2021", descrition:"Working with Rémi was delightful. What a dedicated and passionnate person ! He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
+testi2 = Testimonial.create!(company: "Fake Company 2", date: "2022", descrition:"I highly recommend Rémi as developer ! He took time to create with us the website of our dreams !")
+testi3 = Testimonial.create!(company: "Fake Company 3", date: "2023", descrition:"Mr Tondeux has been very professional during our collaboration. He also introduce us to a webdesigner to work with so our user experience through the website is now cleaner as ever !")
+testi4 = Testimonial.create!(company: "Fake Company 4", date: "2024", descrition:"As an architect, I hired Rémi to do my portfolio website. At first, I tried to do it myself with a no-code solution but it was very hard to organize all my ideas. Rémi, with his calm and professional attitude, helped me to focus on what has the best valuable things to share on my portfolio !")
+testi5 = Testimonial.create!(company: "Fake Company 5", date: "2025", descrition:"Working with Rémi was delightful. What a dedicated and passionnate person ! He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
+testi6 = Testimonial.create!(company: "Fake Company 6", date: "2026", descrition:"Working with Rémi was delightful. What a dedicated and passionnate person ! He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
+testi7 = Testimonial.create!(company: "Fake Company 7", date: "2027", descrition:"Working with Rémi was delightful. What a dedicated and passionnate person ! He totally understand our core business and did a really good job puting our strengths into the spotlight. Thanks to our brand new website we are getting more and more leads !")
 
 puts "done"
