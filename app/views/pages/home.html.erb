@@ -3,8 +3,8 @@
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
-        <span class="button btn-light" data-change-mode-target="dark" data-action="click->game#progress click->change-mode#dark">Dark</span>
-        <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#progress click->change-mode#funky">Funky</span>
+        <span class="button btn-light" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
+        <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
       <h4 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h4>
       <h4 data-navigation-target="aboutBtn" data-action="click->navigation#about">About me</h4>
@@ -80,14 +80,15 @@
             </div>
             <span class="btn btn-success" data-action="click->game#hint">Hint</span>
             <div class="d-none" data-game-target="hint">
-              <ul>
-                <li> Visit homepage : <span class="true"><i class="fas fa-check"></i></span></li>
-                <li> Switch mode : <span data-game-target="mode" class="false"><i class="fas fa-times"></i></span></li>
-                <li> Return profile picture : <span data-game-target="avatar" class="false"><i class="fas fa-times"></i></span></li>
-                <li> Filter projects : <span data-game-target="tag" class="false"><i class="fas fa-times"></i></span></li>
-                <li> Return project card : <span data-game-target="card" class="false"><i class="fas fa-times"></i></span> </li>
-                <li> Rotate testimonials : <span data-game-target="carrou" class="false"><i class="fas fa-times"></i></span> </li>
-              </ul>
+              <div class="pt-3">
+                <p> Visit the homepage : <span class="true"><i class="fas fa-check"></i></span></p>
+                <p> Switch to dark or funky mode : <span data-game-target="mode" class="false"><i class="fas fa-times"></i></span></p>
+                <p> Find a way to return the profile picture : <span data-game-target="avatar" class="false"><i class="fas fa-times"></i></span></p>
+                <p> Browse the projects with tags : <span data-game-target="tag" class="false"><i class="fas fa-times"></i></span></p>
+                <p> Return a project card : <span data-game-target="card" class="false"><i class="fas fa-times"></i></span> </p>
+                <p> Rotate the testimonials : <span data-game-target="carrou" class="false"><i class="fas fa-times"></i></span> </p>
+                <p> Visit the contact section : <span data-game-target="contact" class="false"><i class="fas fa-times"></i></span> </p>
+              </div>
             </div>
           </div>
         </div>
@@ -96,28 +97,28 @@
           <p>Because I really care about work-life balance, you will find here both personal and professional projects.
             Everything here define who I am and gave me either technical or soft skills.
             Feel free to sort them using the tags below.</p>
-          <div class="tags-container">
+          <div class="tags-container mb-2">
             <div class="d-flex justify-content-around align-items-center py-2">
-              <h4 data-filter-target="all" data-action="click->game#progress click->filter#all">#all</h4>
-              <p data-filter-target="pro" data-action="click->game#progress click->filter#pro">#professional</p>
-              <h6 data-filter-target="web" data-action="click->game#progress click->filter#web">#web</h6>
+              <h4 data-filter-target="all" data-action="click->game#tag click->filter#all">#all</h4>
+              <p data-filter-target="pro" data-action="click->game#tag click->filter#pro">#professional</p>
+              <h6 data-filter-target="web" data-action="click->game#tag click->filter#web">#web</h6>
             </div>
             <div class="d-flex justify-content-around align-items-center py-2">
-              <p data-filter-target="social" data-action="click->game#progress click->filter#social">#social</p>
-              <h6 data-filter-target="lifestyle" data-action="click->game#progress click->filter#lifestyle">#lifestyle<h6>
-              <p data-filter-target="perso" data-action="click->game#progress click->filter#perso">#personal</p>
-              <h4 data-filter-target="award" data-action="click->game#progress click->filter#award">#awarded</h4>
+              <p data-filter-target="social" data-action="click->game#tag click->filter#social">#social</p>
+              <h6 data-filter-target="lifestyle" data-action="click->game#tag click->filter#lifestyle">#lifestyle<h6>
+              <p data-filter-target="perso" data-action="click->game#tag click->filter#perso">#personal</p>
+              <h4 data-filter-target="award" data-action="click->game#tag click->filter#award">#awarded</h4>
             </div>
             <div class="d-flex justify-content-around align-items-center py-2">
-              <p data-filter-target="study" data-action="click->game#progress click->filter#study">#study</p>
-              <h6 data-filter-target="sport" data-action="click->game#progress click->filter#sport">#sport<h6>
-              <p data-filter-target="env" data-action="click->game#progress click->filter#env">#environment<p>
+              <p data-filter-target="study" data-action="click->game#tag click->filter#study">#study</p>
+              <h6 data-filter-target="sport" data-action="click->game#tag click->filter#sport">#sport<h6>
+              <p data-filter-target="env" data-action="click->game#tag click->filter#env">#environment<p>
             </div>
           </div>
           <div class="row">
             <% @projects.each do |project| %>
               <div class="col-12 col-lg-4">
-                <div class="effect-purpose reset" data-controller="projects" data-action="click->game#progress click->projects#return" data-projects-target="card">
+                <div class="effect-purpose reset" data-controller="projects" data-action="click->game#card click->projects#return" data-projects-target="card">
                   <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= project.pic %>')" data-change-mode-target="card">
                     <h4><%= project.title %></h4>
                     <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
@@ -145,7 +146,7 @@
           </div>
           <h6>We already worked together</h6>
           <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
-            <span class="btn btn-carrou" data-action="click->game#progress click->carroussel#turnLeft"> <i class="fas fa-chevron-left"></i> </span>
+            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnLeft"> <i class="fas fa-chevron-left"></i> </span>
             <div class="testimonials-container">
               <% x = @testimonials.length %>
               <% @testimonials.each do |testimonial| %>
@@ -188,7 +189,7 @@
                 <% end %>
               <% end  %>
             </div>
-            <span class="btn btn-carrou" data-action="click->game#progress click->carroussel#turnRight"><i class="fas fa-chevron-right"></i></span>
+            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"><i class="fas fa-chevron-right"></i></span>
           </div>
           <div class="card-classic" data-change-mode-target="card">
             <div class="text-center">
