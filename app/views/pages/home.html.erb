@@ -1,10 +1,10 @@
-<div data-controller="navigation change-mode" data-navigation-target="home" data-action="scroll@window->navigation#underline">
+<div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->navigation#underline">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
-        <span class="button btn-light" data-change-mode-target="dark" data-action="click->change-mode#dark">Dark</span>
-        <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->change-mode#funky">Funky</span>
+        <span class="button btn-light" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
+        <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
       <h4 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h4>
       <h4 data-navigation-target="aboutBtn" data-action="click->navigation#about">About me</h4>
@@ -63,9 +63,10 @@
           </div>
         </div>
         <div class="card-classic" data-change-mode-target="card">
-          <div class="game" data-controller="game">
+          <div class="game">
             <h5>Let's play a little game:</h5>
             <h5>Try to check every feature of this website !</h5>
+            <p>(refresh this page to resest progression)</p>
             <div class="d-flex justify-content-between align-items-center my-4">
               <p>Progress :</p>
               <div class="d-flex progress-container">
@@ -79,11 +80,11 @@
             <span class="btn btn-success" data-action="click->game#hint">Hint</span>
             <div class="d-none" data-game-target="hint">
               <ul>
-                <li> Switch mode : false</li>
-                <li> Return profile picture : true</li>
-                <li> Filter projects : true</li>
-                <li> Return projetc-card : false </li>
-                <li> Rotate testimonials : false </li>
+                <li> Switch mode : <span data-game-target="mode" class="false">False</span></li>
+                <li> Return profile picture : <span data-game-target="picture" class="false">False</span></li>
+                <li> Filter projects : <span data-game-target="tag" class="false">False</span></li>
+                <li> Return projetc-card : <span data-game-target="card" class="false">False</span> </li>
+                <li> Rotate testimonials : <span data-game-target="carrou" class="false">False</span> </li>
               </ul>
             </div>
           </div>
