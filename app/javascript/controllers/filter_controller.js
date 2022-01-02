@@ -172,7 +172,6 @@ export default class extends Controller {
     this.awardTarget.classList.toggle("underline");
     const award = this.awardTarget.innerText.split("#")[1].toLowerCase();
     const tags = this.tagsTargets.forEach(tag => {
-      console.log(tag);
       const arrayTags = tag.innerText.split(" ");
       let display = false;
       arrayTags.forEach(tag => {
