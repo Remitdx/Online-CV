@@ -1,4 +1,4 @@
-<div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->navigation#underline">
+<div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->game#contact scroll@window->navigation#underline">
   <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
@@ -19,7 +19,7 @@
   </div>
   <div class="body-classic" data-change-mode-target="body" data-navigation-target="body">
     <div class="container">
-      <div data-controller="return-pic" data-action="mousemove->return-pic#return">
+      <div data-controller="return-pic" data-action="mousemove->game#avatar mousemove->return-pic#return">
         <div class="text-center">
           <h3>Rémi Tondeux - 30 years old - engineer and Web developer</h3>
           <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
@@ -71,12 +71,12 @@
             <div class="d-flex justify-content-between align-items-center my-4">
               <p>Progress:</p>
               <div class="d-flex progress-container">
-                <div class="green" data-game-target="green" style="width: 8%;">
+                <div class="green" data-game-target="green" style="width: 9%;">
                 </div>
-                <div class="red" data-game-target="red" style="width: 92%;">
+                <div class="red" data-game-target="red" style="width: 91%;">
                 </div>
               </div>
-              <p data-game-target="percent"> 8% </p>
+              <p data-game-target="percent"> 9% </p>
             </div>
             <span class="btn btn-success" data-action="click->game#hint">Hint</span>
             <div class="d-none" data-game-target="hint">
@@ -139,7 +139,7 @@
             <% end  %>
           </div>
         </div>
-        <div data-navigation-target="contact">
+        <div data-game-target="end" data-navigation-target="contact">
           <h3>Get in touch with me</h3>
           <div class="message">
             <p>You are ...</p>

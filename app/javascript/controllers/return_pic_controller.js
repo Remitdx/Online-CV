@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ['pic']
 
   return(event) {
-    if (event.x < (window.innerWidth/2) ) {
+    if (event.x < (window.innerWidth / 2) ) {
       this.picTargets.forEach(pic=>pic.classList.add("turn-left"));
       this.picTargets.forEach(pic=>pic.classList.remove("reset"));
     }
