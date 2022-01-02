@@ -1,0 +1,28 @@
+.game {
+  h5 {
+    font-family: 'Press Start 2P', sans-serif;
+  }
+  p {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+.progress-container {
+  width: 70%;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.green {
+  background-color: rgb(0, 255, 0);
+  height: 10px;
+  width: 64%;
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+  height: 10px;
+  width: 36%;
+}
