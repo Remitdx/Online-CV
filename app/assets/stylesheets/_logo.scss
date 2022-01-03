@@ -1,7 +1,16 @@
-.logo {
-  height: 80px;
-  padding: 8px;
-  &:hover{
+.logos {
+  background-color: rgba($color: white, $alpha: 0.2);
+  border-radius: 10px;
+  height: 200px;
+}
 
-  }
+.logo {
+  height: 75px;
+  padding: 8px;
+}
+
+.level {
+  background-color: red;
+  width: 10px;
+  height: 90px;
 }

@@ -1,6 +1,6 @@
 .body-classic{
   background-color: $blue-1;
-  h1, h2, h3, h4, h6, p, a {
+  h1, h2, h3, h4, h5, h6, p, a {
     color: $blue-4;
   }
   h3 {
@@ -18,7 +18,7 @@
 }
 
 .body-dark{
-  background-color: $black-1;
+  background: linear-gradient(to right, $black-2, $black-1 35%, $black-1 70%, $black-2 100%);
   h1, h2, h3, h4, h5, h6, p, a {
     color: $grey-1;
   }
@@ -37,7 +37,7 @@
 }
 
 .body-funky{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(https://static-mapetitemercerie.o10c.net/126420-thickbox_default/-coupon-250-cm-x-110-cm-tissu-coton-a-carreaux-janis-noirvert.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5),rgba(0,0,0,0.2) 50%,rgba(0, 0, 0, 0.5) 100%), url(https://static-mapetitemercerie.o10c.net/126420-thickbox_default/-coupon-250-cm-x-110-cm-tissu-coton-a-carreaux-janis-noirvert.jpg);
   background-position: top;
   h1, h2, h3, h4, h6, p {
     color: $white;
