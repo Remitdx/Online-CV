@@ -1,0 +1,32 @@
+.footer-classic {
+  width: 100%;
+  background-color: $blue-4;
+  text-align: center;
+  p {
+    color: $blue-1;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.footer-dark {
+  width: 100%;
+  background-color: $black-2;
+  text-align: center;
+  p {
+    color: $white-1;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.footer-funky {
+  width: 100%;
+  background: linear-gradient(30deg, $banana, $pink);
+  text-align: center;
+  p {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+  }
+}

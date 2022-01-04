@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'juke'];
+  static targets = ['classic', 'dark', 'funky', 'body', 'navigate', 'bg', 'lul', 'card', 'footer'];
 
   classic(event) {
     this.classicTarget.classList.add("btn-darky");
@@ -21,6 +21,9 @@ export default class extends Controller {
     this.cardTargets.forEach(card => card.classList.add("card-classic"));
     this.cardTargets.forEach(card => card.classList.remove("card-dark"));
     this.cardTargets.forEach(card => card.classList.remove("card-funky"));
+    this.footerTarget.classList.add("footer-classic");
+    this.footerTarget.classList.remove("footer-dark");
+    this.footerTarget.classList.remove("footer-funky");
   }
 
   dark(event) {
@@ -41,6 +44,9 @@ export default class extends Controller {
     this.cardTargets.forEach(card => card.classList.remove("card-classic"));
     this.cardTargets.forEach(card => card.classList.add("card-dark"));
     this.cardTargets.forEach(card => card.classList.remove("card-funky"));
+    this.footerTarget.classList.remove("footer-classic");
+    this.footerTarget.classList.add("footer-dark");
+    this.footerTarget.classList.remove("footer-funky");
   }
 
   funky(event) {
@@ -61,5 +67,9 @@ export default class extends Controller {
     this.cardTargets.forEach (card => card.classList.remove("card-classic"));
     this.cardTargets.forEach (card => card.classList.remove("card-dark"));
     this.cardTargets.forEach (card => card.classList.add("card-funky"));
+    this.footerTarget.classList.remove("footer-classic");
+    this.footerTarget.classList.remove("footer-dark");
+    this.footerTarget.classList.add("footer-funky");
+
   }
 }
