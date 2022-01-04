@@ -145,10 +145,36 @@
             <% end  %>
           </div>
         </div>
-        <div data-game-target="end" data-navigation-target="contact">
+        <div data-controller="contact" data-game-target="end" data-navigation-target="contact">
           <h3>Get in touch with me</h3>
-          <div class="message">
-            <p>You are ...</p>
+          <p>You are ...</p>
+          <div class="d-flex">
+            <span class="btn-msg btn-darky" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
+            <span class="btn-msg btn-light" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
+            <span class="btn-msg btn-light" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
+            <span class="btn-msg btn-light" data-contact-target="developerBtn" data-action="click->contact#developer">Developer</span>
+            <span class="btn-msg btn-light" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
+            <span class="btn-msg btn-light" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
+          </div>
+          <div class="message" data-contact-target="firm">
+            <h2>Wanna hire me for your next project ?</h2>
+            <h3>ADR - 350€ per day</h3>
+          </div>
+          <div class="message d-none" data-contact-target="po">
+            <h2>You have great idea and need my skills to make it come true ?</h2>
+          </div>
+          <div class="message d-none" data-contact-target="recruiter">
+            <h2>You are looking for a freelance who can help your client ?</h2>
+            <h3>ADR - 350€ per day</h3>
+          </div>
+          <div class="message d-none" data-contact-target="developer">
+            <h2>I know your are already checking my code ! So, clean enough to collaborate ?</h2>
+          </div>
+          <div class="message d-none" data-contact-target="designer">
+            <h2>Because good UI/UX design makes everything better, I'm always interested in working with webdsigners !</h2>
+          </div>
+          <div class="message d-none" data-contact-target="curious">
+            <h2>No, curiosity won't kill the cat ! Being curious is a good thing on my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</h2>
           </div>
           <h6>We already worked together</h6>
           <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
