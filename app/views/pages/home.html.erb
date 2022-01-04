@@ -3,7 +3,7 @@
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
-        <span class="button btn-light" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
+        <span class="button btn-light btn-middle" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
       <h4 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h4>
@@ -30,39 +30,6 @@
         But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.
         That's how I joined in 2021 "Le Wagon" bootcamp which gives me new technicals skills and nice tools to collaborate.
         I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
-        <div class="row justify-content-center logos">
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Ruby.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Rails.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "JS.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "HTML.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "CSS.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Cplus.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Python.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Git.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Github.png", class: "logo" %>
-          </div>
-          <div class="col-4 col-lg-1">
-            <%= image_tag "Figma.png", class: "logo" %>
-          </div>
-          <p>next techno to learn : React</p>
-        </div>
         <div class="card-classic" data-change-mode-target="card">
           <div class="game">
             <h5>Let's play a little game:</h5>
@@ -92,6 +59,45 @@
             </div>
           </div>
         </div>
+        <div class="row justify-content-center mt-3 logos">
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Ruby.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Rails.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "HTML.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "CSS.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "JS.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Stimulus.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Git.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Github.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Figma.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "React.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Cplus.png", class: "logo" %>
+          </div>
+          <div class="col-3 col-lg-1 justify-content-center align-items-center d-flex">
+            <%= image_tag "Python.png", class: "logo" %>
+          </div>
+        </div>
+
         <div data-controller="filter" data-navigation-target="projects">
           <h3>Discover my projects</h3>
           <p>Because I really care about work-life balance, you will find here both personal and professional projects.
@@ -119,7 +125,7 @@
             <% @projects.each do |project| %>
               <div class="col-12 col-lg-4">
                 <div class="effect-purpose reset" data-controller="projects" data-action="click->game#card click->projects#return" data-projects-target="card">
-                  <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= project.pic %>')" data-change-mode-target="card">
+                  <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.pic %>')" data-change-mode-target="card">
                     <h4><%= project.title %></h4>
                     <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
                   </div>
@@ -139,12 +145,43 @@
             <% end  %>
           </div>
         </div>
-        <div data-game-target="end" data-navigation-target="contact">
-          <h3>Get in touch with me</h3>
-          <div class="message">
-            <p>You are ...</p>
+        <div data-controller="contact" data-game-target="end" data-navigation-target="contact">
+          <h3>Time to get in touch, you are ..</h3>
+          <div class="message text-center d-flex align-items-center flex-column justify-content-between card-classic" data-change-mode-target="card">
+            <div class="d-flex btn-msg-wrap">
+              <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
+              <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
+              <span class="btn-msg btn-light btn-middle" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
+              <span class="btn-msg btn-light btn-middle" data-contact-target="developerBtn" data-action="click->contact#developer">Developer</span>
+              <span class="btn-msg btn-light btn-middle" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
+              <span class="btn-msg btn-light btn-right" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
+            </div>
+            <div data-contact-target="firm">
+              <p>Wanna hire me for your next project ?</p>
+              <p>ADR - 350€ per day</p>
+            </div>
+            <div class="d-none" data-contact-target="po">
+              <p>You have great idea and need my skills to make it come true ?</p>
+            </div>
+            <div class="d-none" data-contact-target="recruiter">
+              <p>You are looking for a freelance who can help your client ?</p>
+              <p>ADR - 350€ per day</p>
+            </div>
+            <div class="d-none" data-contact-target="developer">
+              <p>I know your are already checking my code ! So, clean enough to collaborate ?</p>
+            </div>
+            <div class="d-none" data-contact-target="designer">
+              <p>Because good UI/UX design makes everything better, I'm always interested in working with webdsigners !</p>
+            </div>
+            <div class="d-none" data-contact-target="curious">
+              <p>No, curiosity won't kill the cat ! Being curious is a good thing in my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</p>
+            </div>
+            <div>
+              <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
+            </div>
           </div>
-          <h6>We already worked together</h6>
           <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
             <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnLeft"> <i class="fas fa-chevron-left"></i> </span>
             <div class="testimonials-container">
@@ -190,13 +227,6 @@
               <% end  %>
             </div>
             <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"><i class="fas fa-chevron-right"></i></span>
-          </div>
-          <div class="card-classic" data-change-mode-target="card">
-            <div class="text-center">
-              <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
-            </div>
           </div>
         </div>
       </div>
