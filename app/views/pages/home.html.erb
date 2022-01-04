@@ -21,14 +21,14 @@
     <div class="container">
       <div data-controller="return-pic" data-action="mousemove->game#avatar mousemove->return-pic#return">
         <div class="text-center">
-          <h3>Rémi Tondeux - 30 years old - engineer and Web developer</h3>
+          <h3>Hi, welcome to my portfolio website !</h3>
           <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
           <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
         </div>
-        <p>Hello dear visitor ! Welcome to my portfolio website. I am Rémi, a french engineer, who decided to switch his career path in 2021 from construction sites to web development.
+        <p>I am Rémi, a french engineer, who decided to switch his career path in 2021 from construction sites to web development.
         After being introduced to basics of algorithmic in engineering school around 2012, I keep on learning some programming languages on my own through the past years.
         But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.
-        That's how I joined in 2021 "Le Wagon" bootcamp which gives me new technicals skills and nice tools to collaborate.
+        That's how I joined in 2021 "Le Wagon" bootcamp which gave me new technicals skills and nice tools to collaborate.
         I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
         <div class="card-classic" data-change-mode-target="card">
           <div class="game">
@@ -147,7 +147,7 @@
         </div>
         <div data-controller="contact" data-game-target="end" data-navigation-target="contact">
           <h3>Time to get in touch, you are ..</h3>
-          <div class="message text-center d-flex align-items-center flex-column justify-content-between card-classic" data-change-mode-target="card">
+          <div class="msg-wrap text-center d-flex align-items-center flex-column justify-content-between card-classic" data-change-mode-target="card">
             <div class="d-flex btn-msg-wrap">
               <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
               <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
@@ -156,24 +156,25 @@
               <span class="btn-msg btn-light btn-middle" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
               <span class="btn-msg btn-light btn-right" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
             </div>
-            <div data-contact-target="firm">
-              <p>Wanna hire me for your next project ?</p>
+            <div class="msg" data-contact-target="firm">
+              <p>You work for a company and need to scale temporarly your teams, let's discuss about it !</p>
               <p>ADR - 350€ per day</p>
             </div>
-            <div class="d-none" data-contact-target="po">
-              <p>You have great idea and need my skills to make it come true ?</p>
+            <div class="msg d-none" data-contact-target="po">
+              <p>You have a great idea to develop and need web development skills ? Let's meet to see how make your dreams comes true !</p>
+              <p>First meeting free of charges.</p>
             </div>
-            <div class="d-none" data-contact-target="recruiter">
-              <p>You are looking for a freelance who can help your client ?</p>
+            <div class="msg d-none" data-contact-target="recruiter">
+              <p>You are a recruiter looking for a freelance who can help your client ? Let's discuss about it !</p>
               <p>ADR - 350€ per day</p>
             </div>
-            <div class="d-none" data-contact-target="developer">
-              <p>I know your are already checking my code ! So, clean enough to collaborate ?</p>
+            <div class="msg d-none" data-contact-target="developer">
+              <p>Hello my friend ! I know that your are already checking my code ! So, clean enough to collaborate ?</p>
             </div>
-            <div class="d-none" data-contact-target="designer">
-              <p>Because good UI/UX design makes everything better, I'm always interested in working with webdsigners !</p>
+            <div class="msg d-none" data-contact-target="designer">
+              <p>Because good UI/UX design makes everything better, I am always interested in working with webdsigners ! Let's meet up for future collaborations !</p>
             </div>
-            <div class="d-none" data-contact-target="curious">
+            <div class="msg d-none" data-contact-target="curious">
               <p>No, curiosity won't kill the cat ! Being curious is a good thing in my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</p>
             </div>
             <div>
@@ -233,6 +234,6 @@
     </div>
   </div>
   <div class="footer-classic py-3" data-change-mode-target="footer">
-    <p>made with love by myself - thanks for your visit</p>
+    <p>Made with love by myself - Thank you for your visit</p>
   </div>
 </div>
