@@ -25,11 +25,11 @@
           <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
           <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
         </div>
-        <p>I am Rémi, a french engineer, who decided to switch his career path in 2021 from construction sites to web development.
-        After being introduced to basics of algorithmic in engineering school around 2012, I keep on learning some programming languages on my own through the past years.
-        But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.
-        That's how I joined in 2021 "Le Wagon" bootcamp which gave me new technicals skills and nice tools to collaborate.
-        I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
+        <p>I am Rémi, a french engineer, who decided to switch his career path in 2021 from construction sites to web development.</p>
+        <p> After being introduced to basics of algorithmic in engineering school around 2012, I keep on learning some programming languages on my own through the past years.
+        But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.</p>
+        <p>That's how I joined in 2021 "Le Wagon" bootcamp which gave me new technicals skills and nice tools to collaborate.</p>
+        <p>I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
         <div class="card-classic" data-change-mode-target="card">
           <div class="game">
             <h5>Let's play a little game:</h5>
@@ -184,7 +184,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
-            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnLeft"> <i class="fas fa-chevron-left"></i> </span>
+            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"> <i class="fas fa-chevron-left"></i> </span>
             <div class="testimonials-container">
               <% x = @testimonials.length %>
               <% @testimonials.each do |testimonial| %>
@@ -227,7 +227,7 @@
                 <% end %>
               <% end  %>
             </div>
-            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"><i class="fas fa-chevron-right"></i></span>
+            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnLeft"><i class="fas fa-chevron-right"></i></span>
           </div>
         </div>
       </div>

@@ -3,37 +3,23 @@
   h1, h2, h3, h4, h5, h6, p, a {
     color: $blue-4;
   }
-  h3 {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  }
   .btn-link {
   color: $blue-4;
-  background-color: rgba($color: #ffffff, $alpha: 0.4) ;
+  background-color: rgba($color: #ffffff, $alpha: 0.8) ;
   border: 1px rgba($color: $blue-4, $alpha: 0.8) solid;
-  &:hover {
-    color: white;
   }
-}
 }
 
 .body-dark{
-  background: linear-gradient(to right, $black-2, $black-1 25%, $black-1 75%, $black-2 100%);
+  background: linear-gradient(to right, $black-1, $black-0 25%, $black-0 75%, $black-1 100%);
   h1, h2, h3, h4, h5, h6, p, a {
     color: $grey-1;
   }
-  h3 {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  }
   .btn-link {
-  color:$grey-1;
-  background-color: rgba($color: #ffffff, $alpha: 0.4) ;
-  border: 1px rgba($color: #dfdfdf, $alpha: 0.8) solid;
-  &:hover {
-    color: $white-1;
+  color:black;
+  background-color: rgba($color: #ffffff, $alpha: 0.6) ;
+  border: 1px rgba($color: #ffffff, $alpha: 1) solid;
   }
-}
 }
 
 .body-funky{
@@ -43,20 +29,13 @@
     color: $white;
     text-shadow: 0 0 1px black;
   }
-  h3 {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  }
   .card-funky p {
     color:black;
     text-shadow: none;
   }
   .btn-link {
   color: black;
-  background-color: rgba($color: #5e5e5e, $alpha: 0.4) ;
+  background-color: rgba($color: #ffffff, $alpha: 0.8) ;
   border: 1px rgba($color: black, $alpha: 0.8) solid;
-  &:hover {
-    color: black;
   }
-}
 }
