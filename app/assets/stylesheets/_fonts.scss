@@ -7,29 +7,8 @@
 //font-family: 'Rock Salt';
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt');
 
-
-h1 {
-  font-family: 'Rock Salt', sans-serif;
-}
-
-h2 {
-  font-family: 'Heebo', sans-serif;
-}
-
-h3 {
-  font-family: 'Rock Salt', sans-serif;
-}
-
-h4 { // for navigation titles
-  font-family: 'Rock Salt', sans-serif;
-}
-
-h6 {
-  font-family: 'Heebo', sans-serif;
-}
-
-p {
-  font-family: 'Heebo', sans-serif;
+h1, h2, h3, p {
+  margin: 0;
 }
 
 .fab {

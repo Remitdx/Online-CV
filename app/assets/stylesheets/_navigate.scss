@@ -1,7 +1,8 @@
 .navigate-classic {
   width: 100%;
   background-color: $blue-4;
-  h4 {
+  h2 {
+    font-family: 'Rock Salt', sans-serif;
     cursor: pointer;
     color: $blue-1;
     font-size: 20px;
@@ -12,7 +13,8 @@
 .navigate-dark {
   width: 100%;
   background-color: $black-2;
-  h4 {
+  h2 {
+    font-family: 'Rock Salt', sans-serif;
     cursor: pointer;
     color: $white-1;
     font-size: 20px;
@@ -23,7 +25,8 @@
 .navigate-funky {
   width: 100%;
   background: linear-gradient(30deg, $banana, $pink);
-  h4 {
+  h2 {
+    font-family: 'Rock Salt', sans-serif;
     cursor: pointer;
     color: black;
     font-size: 20px;
