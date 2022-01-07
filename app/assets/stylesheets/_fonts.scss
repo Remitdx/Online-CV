@@ -13,19 +13,21 @@
   --ff-geek: 'Press Start 2P';
 
   --fs-xxl: 2.5rem;
-  --fs-xl: 1.75rem;
-  --fs-m: 1.375rem;
-  --fs-s: 1.25rem;
-  --fs-xs: 1rem;
+  --fs-xl: 1.5rem;
+  --fs-m: 1.3rem; // weird scaling take care
+  --fs-s: 1.125rem;
+  --fs-xs: 0.75rem;
+  --fs-xxs: 0.6rem
 }
 
 @media (min-width: 40em) {
   :root {
     --fs-xxl: 5rem;
-    --fs-xl: 3rem;
-    --fs-m: 3rem;
+    --fs-xl: 2.25rem;
+    --fs-m: 3rem; // for typing text in banner
     --fs-s: 1.5rem;
-    --fs-xs:  1.125rem;
+    --fs-xs:  1rem;
+    --fs-xxs: 0.75rem;
   }
 }
 
@@ -36,6 +38,15 @@ h1, h2, h3, p {
 .fab {
   font-size: 32px;
   margin: 0px 16px 8px 16px;
+}
+
+p{
+  font-size: var(--fs-xs);
+}
+
+.section-title {
+  font-family: var(--ff-handwrite);
+  font-size: var(--fs-xl);
 }
 
 a {

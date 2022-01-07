@@ -2,11 +2,10 @@
   width: 100%;
   background-color: $blue-4;
   h2 {
-    font-family: 'Rock Salt', sans-serif;
+    font-family: var(--ff-handwrite);
     cursor: pointer;
     color: $blue-1;
-    font-size: 14px;
-    margin-bottom: 0;
+    font-size: var(--fs-s);
   }
 }
 
@@ -14,11 +13,10 @@
   width: 100%;
   background-color: $black-2;
   h2 {
-    font-family: 'Rock Salt', sans-serif;
+    font-family: var(--ff-handwrite);
     cursor: pointer;
     color: $white-1;
-    font-size: 14px;
-    margin-bottom: 0;
+    font-size: var(--fs-s);
   }
 }
 
@@ -26,18 +24,9 @@
   width: 100%;
   background: linear-gradient(30deg, $banana, $pink);
   h2 {
-    font-family: 'Rock Salt', sans-serif;
+    font-family: var(--ff-handwrite);
     cursor: pointer;
     color: black;
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 40em) {
-  .navigate-classic h2,
-  .navigate-dark h2,
-  .navigate-funky h2 {
-    font-size: 24px;
+    font-size: var(--fs-s);
   }
 }
