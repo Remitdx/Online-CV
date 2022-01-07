@@ -1,12 +1,12 @@
 <div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->game#contact scroll@window->navigation#underline">
   <nav class="navigate-classic fixed-top" data-change-mode-target="navigate">
-    <div class="d-lg-flex text-center justify-content-between container">
+    <div class="d-lg-flex text-center container">
       <div class="d-inline-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
         <span class="button btn-light btn-middle" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
-      <div class="d-flex justify-content-between">
+      <div class="d-flex grow justify-content-between">
         <h2 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h2>
         <h2 data-navigation-target="aboutBtn" data-action="click->navigation#about">About</h2>
         <h2 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h2>
@@ -40,24 +40,24 @@
             <p>Try to check every feature of this website !</p>
             <p>(refresh to reset progression)</p>
             <div class="d-flex justify-content-between align-items-center">
-              <p>Progress:</p>
+              <p>Progress: </p>
               <div class="d-flex progress-container">
                 <div class="green" data-game-target="green" style="width: 9%;">
                 </div>
                 <div class="red" data-game-target="red" style="width: 91%;">
                 </div>
               </div>
-              <p data-game-target="percent"> 9% </p>
+              <p data-game-target="percent"> 9%</p>
             </div>
             <span class="btn btn-success" data-action="click->game#hint">Hint</span>
             <div class="d-none" data-game-target="hint">
-              <p> Visit the homepage : <span class="true"><i class="fas fa-check"></i></span></p>
-              <p> Switch to dark or funky mode : <span data-game-target="mode" class="false"><i class="fas fa-times"></i></span></p>
-              <p> Find a way to return the profile picture : <span data-game-target="avatar" class="false"><i class="fas fa-times"></i></span></p>
-              <p> Browse the projects with tags : <span data-game-target="tag" class="false"><i class="fas fa-times"></i></span></p>
-              <p> Return a project card : <span data-game-target="card" class="false"><i class="fas fa-times"></i></span> </p>
-              <p> Rotate the testimonials : <span data-game-target="carrou" class="false"><i class="fas fa-times"></i></span> </p>
-              <p> Visit the contact section : <span data-game-target="contact" class="false"><i class="fas fa-times"></i></span> </p>
+              <p> Visit the homepage: <span class="true"><i class="fas fa-check"></i></span></p>
+              <p> Switch to dark or funky mode: <span data-game-target="mode" class="false"><i class="fas fa-times"></i></span></p>
+              <p> Find a way to return the profile picture: <span data-game-target="avatar" class="false"><i class="fas fa-times"></i></span></p>
+              <p> Browse the projects with tags: <span data-game-target="tag" class="false"><i class="fas fa-times"></i></span></p>
+              <p> Return a project card: <span data-game-target="card" class="false"><i class="fas fa-times"></i></span> </p>
+              <p> Rotate the testimonials: <span data-game-target="carrou" class="false"><i class="fas fa-times"></i></span> </p>
+              <p> Visit the contact section: <span data-game-target="contact" class="false"><i class="fas fa-times"></i></span> </p>
             </div>
           </div>
         </div>

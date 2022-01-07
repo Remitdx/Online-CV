@@ -12,19 +12,19 @@
   --ff-neutral: 'Heebo', sans-serif;
   --ff-geek: 'Press Start 2P';
 
-  --fs-xxl: 2.5rem;
+  --fs-xxl: 2.3rem;
   --fs-xl: 1.5rem;
   --fs-m: 1.3rem; // weird scaling take care
   --fs-s: 1.125rem;
   --fs-xs: 0.75rem;
-  --fs-xxs: 0.6rem
+  --fs-xxs: 0.6rem;
 }
 
 @media (min-width: 40em) {
   :root {
-    --fs-xxl: 5rem;
-    --fs-xl: 2.25rem;
-    --fs-m: 3rem; // for typing text in banner
+    --fs-xxl: 4.5rem;
+    --fs-xl: 2rem;
+    --fs-m: 2.8rem; // for typing text in banner
     --fs-s: 1.5rem;
     --fs-xs:  1rem;
     --fs-xxs: 0.75rem;
