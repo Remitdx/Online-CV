@@ -24,6 +24,7 @@
 .btn-border{
   border: 1px solid #8d8d8d;
   border-radius: 7px;
+  margin: 8px 0;
 }
 
 .btn-msg-wrap{
@@ -55,22 +56,6 @@
 
 .btn-right {
   border-radius: 0 6px 6px 0;
-}
-
-.btn-call-action {
-  color: #ffffff;
-  font-size: var(--fs-xl);
-  background-color: rgba($color: #ffffff, $alpha: 0.5) ;
-  border: 2px rgba($color: #dfdfdf, $alpha: 0.8) solid;
-  padding: 8px 28px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-  &:hover {
-    opacity: 1;
-  }
 }
 
 .btn-link { // take care this btn has color variations in bodies.scss to match différent mode (classic/dark/funky)
