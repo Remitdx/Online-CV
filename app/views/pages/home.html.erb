@@ -148,35 +148,37 @@
     </section>
     <section class="contact container" data-controller="contact" data-game-target="end" data-navigation-target="contact">
       <h2>Time to get in touch, you are ..</h2>
-      <div class="msg-wrap card-classic" data-change-mode-target="card">
-        <div class="d-inline-flex btn-msg-wrap">
-          <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
-          <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
-          <span class="btn-msg btn-light btn-middle" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
-          <span class="btn-msg btn-light btn-middle" data-contact-target="developerBtn" data-action="click->contact#developer">Developer</span>
-          <span class="btn-msg btn-light btn-middle" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
-          <span class="btn-msg btn-light btn-right" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
-        </div>
-        <div class="msg" data-contact-target="firm">
-          <p>You work for a company and need to scale temporarly your teams, let's discuss about it !</p>
-          <p>ADR - 350€ per day</p>
-        </div>
-        <div class="msg d-none" data-contact-target="po">
-          <p>You have a great idea to develop and need web development skills ? Let's meet to see how make your dreams comes true !</p>
-          <p>First meeting free of charges.</p>
-        </div>
-        <div class="msg d-none" data-contact-target="recruiter">
-          <p>You are a recruiter looking for a freelance who can help your client ? Let's discuss about it !</p>
-          <p>ADR - 350€ per day</p>
-        </div>
-        <div class="msg d-none" data-contact-target="developer">
-          <p>Hello my friend ! I know that your are already checking my code ! So, clean enough to collaborate ?</p>
-        </div>
-        <div class="msg d-none" data-contact-target="designer">
-          <p>Because good UI/UX design makes everything better, I am always interested in working with webdsigners ! Let's meet up for future collaborations !</p>
-        </div>
-        <div class="msg d-none" data-contact-target="curious">
-          <p>No, curiosity won't kill the cat ! Being curious is a good thing in my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</p>
+      <div class="card-classic" data-change-mode-target="card">
+        <div class="d-inline-flex flex-lg-column">
+          <div class="d-flex flex-column flex-lg-row btn-msg-wrap">
+            <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
+            <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
+            <span class="btn-msg btn-light btn-middle" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
+            <span class="btn-msg btn-light btn-middle" data-contact-target="developerBtn" data-action="click->contact#developer">Developer</span>
+            <span class="btn-msg btn-light btn-middle" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
+            <span class="btn-msg btn-light btn-right" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
+          </div>
+          <div class="msg" data-contact-target="firm">
+            <p>You work for a company and need to scale temporarly your teams, let's discuss about it !</p>
+            <p>ADR - 350€ per day</p>
+          </div>
+          <div class="msg d-none" data-contact-target="po">
+            <p>You have a great idea to develop and need web development skills ? Let's meet to see how make your dreams comes true !</p>
+            <p>First meeting free of charges.</p>
+          </div>
+          <div class="msg d-none" data-contact-target="recruiter">
+            <p>You are a recruiter looking for a freelance who can help your client ? Let's discuss about it !</p>
+            <p>ADR - 350€ per day</p>
+          </div>
+          <div class="msg d-none" data-contact-target="developer">
+            <p>Hello my friend ! I know that your are already checking my code ! So, clean enough to collaborate ?</p>
+          </div>
+          <div class="msg d-none" data-contact-target="designer">
+            <p>Because good UI/UX design makes everything better, I am always interested in working with webdsigners ! Let's meet up for future collaborations !</p>
+          </div>
+          <div class="msg d-none" data-contact-target="curious">
+            <p>No, curiosity won't kill the cat ! Being curious is a good thing in my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</p>
+          </div>
         </div>
         <div>
           <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
@@ -191,37 +193,37 @@
           <% @testimonials.each do |testimonial| %>
             <% if testimonial.id % x == 1 %>
               <div class="testimonial card-left-out" data-carroussel-target="card">
-                <h2><%= testimonial.company %></h2>
+                <h3><%= testimonial.company %></h3>
                 <p><%= testimonial.date %></p>
                 <p>"<%= testimonial.descrition %> "</p>
               </div>
             <% elsif testimonial.id % x == 2 %>
               <div class="testimonial card-left" data-carroussel-target="card">
-                <h2><%= testimonial.company %></h2>
+                <h3><%= testimonial.company %></h3>
                 <p><%= testimonial.date %></p>
                 <p>"<%= testimonial.descrition %> "</p>
               </div>
             <% elsif testimonial.id % x == 3  %>
               <div class="testimonial main" data-carroussel-target="card">
-                <h2><%= testimonial.company %></h2>
+                <h3><%= testimonial.company %></h3>
                 <p><%= testimonial.date %></p>
                 <p>"<%= testimonial.descrition %> "</p>
               </div>
             <% elsif testimonial.id % x == 4 %>
               <div class="testimonial card-right" data-carroussel-target="card">
-                <h2><%= testimonial.company %></h2>
+                <h3><%= testimonial.company %></h3>
                 <p><%= testimonial.date %></p>
                 <p>"<%= testimonial.descrition %> "</p>
               </div>
               <% elsif testimonial.id % x == 5 %>
               <div class="testimonial card-right-out" data-carroussel-target="card">
-                <h2><%= testimonial.company %></h2>
+                <h3><%= testimonial.company %></h3>
                 <p><%= testimonial.date %></p>
                 <p>"<%= testimonial.descrition %> "</p>
               </div>
             <% else %>
               <div class="testimonial d-none" data-carroussel-target="card">
-                <h2><%= testimonial.company %></h2>
+                <h3><%= testimonial.company %></h3>
                 <p><%= testimonial.date %></p>
                 <p>"<%= testimonial.descrition %> "</p>
               </div>
