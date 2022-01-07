@@ -12,8 +12,16 @@
 
 .body-dark{
   background: linear-gradient(to right, $black-1, $black-0 25%, $black-0 75%, $black-1 100%);
-  h1, h2, h3, p, a {
+  h1, h3, p, a {
     color: $grey-1;
+  }
+  .tags-wrap {
+    p {
+      color: $white-1;
+    }
+  }
+  h2 {
+    color: $white-1;
   }
   .btn-link {
   color:black;
@@ -41,7 +49,7 @@
 }
 
 .text-wrap {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-align: justify;
 }

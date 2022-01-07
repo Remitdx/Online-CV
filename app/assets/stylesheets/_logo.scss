@@ -7,12 +7,13 @@
 }
 
 .logo {
-  height: 75px;
-  padding: 8px;
+  height: 45px;
+  padding: 4px;
 }
 
-.level {
-  background-color: red;
-  width: 10px;
-  height: 90px;
+@media (min-width: 40em) {
+  .logo {
+    height: 75px;
+    padding: 8px;
+  }
 }
