@@ -14,7 +14,7 @@
       </div>
     </div>
   </nav>
-  <header class="banner d-flex align-items-start flex-column justify-content-center">
+  <header class="banner d-flex align-items-center align-items-lg-start flex-column justify-content-center">
     <h1>Rémi Tondeux</h1>
     <p id="job-title"></p>
     <span class="btn-call-action" data-action="click->navigation#contact">Let's work together !</span>
@@ -23,20 +23,22 @@
     <section class="about container">
       <div data-controller="return-pic" data-navigation-target="body" data-action="mousemove->game#avatar mousemove->return-pic#return">
         <div class="text-center">
-          <h2>Hi, welcome to my portfolio website !</h2>
+          <h2 class="section-title">Hi, welcome to my portfolio website !</h2>
           <%= image_tag "RemBG_2.jpg", class: "avatar", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
           <%= image_tag "RemLul.jpg", class: "avatar d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
         </div>
-        <p>I am Rémi, a french engineer, who decided to switch his career path in 2021 from construction sites to web development.</p>
-        <p> After being introduced to basics of algorithmic in engineering school around 2012, I keep on learning some programming languages on my own through the past years.
-        But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.</p>
-        <p>That's how I joined in 2021 "Le Wagon" bootcamp which gave me new technicals skills and nice tools to collaborate.</p>
-        <p>I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
+        <div class="text-wrap">
+          <p>I am Rémi, a french engineer, who decided to switch his career path in 2021 from construction sites to web development.</p>
+          <p> After being introduced to basics of algorithmic in engineering school around 2012, I keep on learning some programming languages on my own through the past years.
+          But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.</p>
+          <p>That's how I joined in 2021 "Le Wagon" bootcamp which gave me new technicals skills and nice tools to collaborate.</p>
+          <p>I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
+        </div>
         <div class="card-classic" data-change-mode-target="card">
           <div class="game">
             <h3>Let's play a little game:</h3>
             <p>Try to check every feature of this website !</p>
-            <p>(refresh this page to resest progression)</p>
+            <p>(refresh to reset progression)</p>
             <div class="d-flex justify-content-between align-items-center">
               <p>Progress:</p>
               <div class="d-flex progress-container">
@@ -100,10 +102,12 @@
       </div>
     </section>
     <section class="projects container" data-controller="filter" data-navigation-target="projects">
-      <h2>Discover my projects</h2>
-      <p>Because I really care about work-life balance, you will find here both personal and professional projects.
-        Everything here define who I am and gave me either technical or soft skills.</p>
-      <p>Feel free to sort them using the tags below.</p>
+      <h2 class="section-title">Discover my projects</h2>
+      <div class="text-wrap">
+        <p>Because I really care about work-life balance, you will find here both personal and professional projects.
+          Everything here define who I am and gave me either technical or soft skills.</p>
+        <p>Feel free to sort them using the tags below.</p>
+      </div>
       <div class="tags-container">
         <div class="d-flex justify-content-around align-items-center">
           <p data-filter-target="all" data-action="click->game#tag click->filter#all">#all</p>
@@ -147,7 +151,7 @@
       </div>
     </section>
     <section class="contact container" data-controller="contact" data-game-target="end" data-navigation-target="contact">
-      <h2>Time to get in touch, you are ..</h2>
+      <h2 class="section-title" >Time to get in touch, you are ..</h2>
       <div class="card-classic" data-change-mode-target="card">
         <div class="d-inline-flex flex-lg-column">
           <div class="d-flex flex-column flex-lg-row btn-msg-wrap">

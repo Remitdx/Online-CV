@@ -1,10 +1,11 @@
 .game {
-  h5 {
-    font-family: 'Press Start 2P', sans-serif;
+  h3 {
+    font-family: var(--ff-geek);
+    font-size: var(--fs-s);
   }
   p {
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 12px;
+    font-family: var(--ff-geek);
+    font-size: var(--fs-xxs);
     margin: 0;
   }
   .true {

@@ -40,9 +40,10 @@
       top:0;
       height:350px;
     }
-    h4 {
+    h3 {
+      font-family: var(--ff-handwrite);
       text-align: center;
-      font-size: 24px;
+      font-size: var(--fs-s);
       color: white;
       text-shadow: 0 0 2px black;
     }
@@ -55,9 +56,10 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    h4 {
+    h3 {
+      font-family: var(--ff-handwrite);
       text-align: center;
-      font-size: 24px;
+      font-size: var(--fs-s);
     }
   }
 }
