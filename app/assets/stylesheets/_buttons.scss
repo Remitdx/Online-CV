@@ -1,9 +1,15 @@
 .button {
   width: 75px;
   text-align: center;
-  padding: 6px 4px;
+  padding: 3px 0px;
   cursor: pointer;
 }
+@media (min-width: 40em) {
+  .button{
+    padding: 6px 3px;
+  }
+}
+
 
 .btn-msg {
   width: 125px;
@@ -56,18 +62,11 @@
   padding: 8px 28px 10px 28px;
   border-radius: 50px;
   font-weight: lighter;
-  margin: 25px 20px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
   cursor: pointer;
   &:hover {
     opacity: 1;
-  }
-}
-
-@media (min-width: 40em) {
-  .btn-call-action {
-    margin: 10px 0 0 130px;
   }
 }
 

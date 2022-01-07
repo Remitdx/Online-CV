@@ -1,7 +1,7 @@
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url(banner.jpg);
   height: 100vh;
-  background-position: center;
+  background-position: 63% 75%;
   background-size: cover;
   h1 {
     font-family: 'Rock Salt', sans-serif;
@@ -9,7 +9,6 @@
     font-size: 72px;
     color: white;
     text-shadow: 0 0 2px black;
-    padding-bottom: 12px;
   }
   p {
     font-size: 40px;
@@ -20,4 +19,11 @@
 
 #job-title {
   height: 50px;
+}
+
+@media (min-width: 40em) {
+  .banner {
+  background-position: center;
+  background-size: cover;
+  }
 }
