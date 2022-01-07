@@ -16,7 +16,7 @@
   text-align: center;
   overflow: hidden;
   transition: all 0.9s ease;
-  h2 {
+  h3 {
     font-size: 18px;
   }
   p {
@@ -28,15 +28,15 @@
 .main {
   position: absolute;
   top: 25px;
-  left: 30%;
-  width: 40%;
+  left: 5%;
+  width: 90%;
   height: 250px;
   opacity: 1;
-  h2 {
-    font-size: 26px;
+  h3 {
+    font-size: 20px;
   }
   p {
-    font-size: 16px ;
+    font-size: 12px ;
     font-style: italic;
   }
 }
@@ -44,23 +44,53 @@
 .card-left-out {
   position: absolute;
   top: 50px;
-  left: -25%;
+  left: -53%;
 }
 
 .card-left {
   position: absolute;
   top: 50px;
-  left: 3%;
+  left: -25%;
 }
 
 .card-right {
   position: absolute;
   top: 50px;
-  left: 73%;
+  left: 101%;
 }
 
 .card-right-out {
   position: absolute;
   top: 50px;
-  left: 101%;
+  left: 129%;
+}
+
+
+@media (min-width: 40em) {
+  .main {
+    left: 30%;
+    width: 40%;
+    h3 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 16px ;
+    }
+  }
+
+  .card-left-out {
+    left: -25%;
+  }
+
+  .card-left {
+    left: 3%;
+  }
+
+  .card-right {
+    left: 73%;
+  }
+
+  .card-right-out {
+    left: 101%;
+  }
 }
