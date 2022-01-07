@@ -1,15 +1,17 @@
 <div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->game#contact scroll@window->navigation#underline">
   <nav class="navigate-classic fixed-top" data-change-mode-target="navigate">
-    <div class="d-flex container align-items-center justify-content-between">
-      <div class="d-flex btn-border">
+    <div class="d-lg-flex container">
+      <div class="d-inline-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
         <span class="button btn-light btn-middle" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
-      <h2 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h2>
-      <h2 data-navigation-target="aboutBtn" data-action="click->navigation#about">About</h2>
-      <h2 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h2>
-      <h2 data-navigation-target="contactBtn" data-action="click->navigation#contact">Contact</h2>
+      <div class="d-flex justify-content-between">
+        <h2 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h2>
+        <h2 data-navigation-target="aboutBtn" data-action="click->navigation#about">About</h2>
+        <h2 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h2>
+        <h2 data-navigation-target="contactBtn" data-action="click->navigation#contact">Contact</h2>
+      </div>
     </div>
   </nav>
   <header class="banner d-flex align-items-start flex-column justify-content-center">
@@ -146,8 +148,8 @@
     </section>
     <section class="contact container" data-controller="contact" data-game-target="end" data-navigation-target="contact">
       <h2>Time to get in touch, you are ..</h2>
-      <div class="msg-wrap text-center d-flex align-items-center flex-column justify-content-between card-classic" data-change-mode-target="card">
-        <div class="d-flex btn-msg-wrap">
+      <div class="msg-wrap card-classic" data-change-mode-target="card">
+        <div class="d-inline-flex btn-msg-wrap">
           <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
           <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
           <span class="btn-msg btn-light btn-middle" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
