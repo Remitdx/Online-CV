@@ -1,27 +1,27 @@
 <div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->game#contact scroll@window->navigation#underline">
-  <div class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
+  <nav class="navigate-classic py-3 fixed-top" data-change-mode-target="navigate">
     <div class="d-flex container align-items-center justify-content-between">
       <div class="d-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
         <span class="button btn-light btn-middle" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
-      <h4 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h4>
-      <h4 data-navigation-target="aboutBtn" data-action="click->navigation#about">About me</h4>
-      <h4 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h4>
-      <h4 data-navigation-target="contactBtn" data-action="click->navigation#contact">Contact</h4>
+      <h2 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h2>
+      <h2 data-navigation-target="aboutBtn" data-action="click->navigation#about">About</h2>
+      <h2 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h2>
+      <h2 data-navigation-target="contactBtn" data-action="click->navigation#contact">Contact</h2>
     </div>
-  </div>
-  <div class="banner d-flex align-items-start flex-column justify-content-center pl-5">
+  </nav>
+  <header class="banner d-flex align-items-start flex-column justify-content-center">
     <h1>Rémi Tondeux</h1>
-    <h2 id="job-title"></h2>
+    <p id="job-title"></p>
     <span class="btn-call-action" data-action="click->navigation#contact">Let's work together !</span>
-  </div>
-  <div class="body-classic" data-change-mode-target="body" data-navigation-target="body">
-    <div class="container">
-      <div data-controller="return-pic" data-action="mousemove->game#avatar mousemove->return-pic#return">
+  </header>
+  <main class="body-classic" data-change-mode-target="body">
+    <section class="about container">
+      <div data-controller="return-pic" data-navigation-target="body" data-action="mousemove->game#avatar mousemove->return-pic#return">
         <div class="text-center">
-          <h3>Hi, welcome to my portfolio website !</h3>
+          <h2>Hi, welcome to my portfolio website !</h2>
           <%= image_tag "RemBG_2.jpg", class: "avatar mb-3", data: { change_mode_target: "bg", return_pic_target: "pic" } %>
           <%= image_tag "RemLul.jpg", class: "avatar mb-3 d-none", data: { change_mode_target: "lul", return_pic_target: "pic" } %>
         </div>
@@ -97,143 +97,142 @@
             <%= image_tag "Python.png", class: "logo" %>
           </div>
         </div>
-
-        <div data-controller="filter" data-navigation-target="projects">
-          <h3>Discover my projects</h3>
-          <p>Because I really care about work-life balance, you will find here both personal and professional projects.
-            Everything here define who I am and gave me either technical or soft skills.
-            Feel free to sort them using the tags below.</p>
-          <div class="tags-container mb-2">
-            <div class="d-flex justify-content-around align-items-center py-2">
-              <h4 data-filter-target="all" data-action="click->game#tag click->filter#all">#all</h4>
-              <p data-filter-target="pro" data-action="click->game#tag click->filter#pro">#professional</p>
-              <h6 data-filter-target="web" data-action="click->game#tag click->filter#web">#web</h6>
-            </div>
-            <div class="d-flex justify-content-around align-items-center py-2">
-              <p data-filter-target="social" data-action="click->game#tag click->filter#social">#social</p>
-              <h6 data-filter-target="lifestyle" data-action="click->game#tag click->filter#lifestyle">#lifestyle<h6>
-              <p data-filter-target="perso" data-action="click->game#tag click->filter#perso">#personal</p>
-              <h4 data-filter-target="award" data-action="click->game#tag click->filter#award">#awarded</h4>
-            </div>
-            <div class="d-flex justify-content-around align-items-center py-2">
-              <p data-filter-target="study" data-action="click->game#tag click->filter#study">#study</p>
-              <h6 data-filter-target="sport" data-action="click->game#tag click->filter#sport">#sport<h6>
-              <p data-filter-target="env" data-action="click->game#tag click->filter#env">#environment<p>
-            </div>
-          </div>
-          <div class="row">
-            <% @projects.each do |project| %>
-              <div class="col-12 col-lg-4">
-                <div class="effect-purpose reset" data-controller="projects" data-action="click->game#card click->projects#return" data-projects-target="card">
-                  <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.pic %>')" data-change-mode-target="card">
-                    <h4><%= project.title %></h4>
-                    <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
-                  </div>
-                  <div class="card-classic card-project-back d-flex justify-content-between flex-column" data-change-mode-target="card">
-                    <h4><%= project.title %></h4>
-                    <p><%= project.description.size > 230 ? project.description.slice!(0..230) + " [...]" : project.description %></p>
-                    <div class="text-right pb-2">
-                      <% if project.title == "Our next collaboration ?"  %>
-                        <span class="btn-link" data-action="click->navigation#contact">Contact</span>
-                      <% else %>
-                        <%= link_to "Details", project_path(project), class:"btn-link" %>
-                      <% end %>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <% end  %>
-          </div>
+      </div>
+    </section>
+    <section class="projects container" data-controller="filter" data-navigation-target="projects">
+      <h2>Discover my projects</h2>
+      <p>Because I really care about work-life balance, you will find here both personal and professional projects.
+        Everything here define who I am and gave me either technical or soft skills.</p>
+      <p>Feel free to sort them using the tags below.</p>
+      <div class="tags-container mb-2">
+        <div class="d-flex justify-content-around align-items-center py-2">
+          <h4 data-filter-target="all" data-action="click->game#tag click->filter#all">#all</h4>
+          <p data-filter-target="pro" data-action="click->game#tag click->filter#pro">#professional</p>
+          <h6 data-filter-target="web" data-action="click->game#tag click->filter#web">#web</h6>
         </div>
-        <div data-controller="contact" data-game-target="end" data-navigation-target="contact">
-          <h3>Time to get in touch, you are ..</h3>
-          <div class="msg-wrap text-center d-flex align-items-center flex-column justify-content-between card-classic" data-change-mode-target="card">
-            <div class="d-flex btn-msg-wrap">
-              <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
-              <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
-              <span class="btn-msg btn-light btn-middle" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
-              <span class="btn-msg btn-light btn-middle" data-contact-target="developerBtn" data-action="click->contact#developer">Developer</span>
-              <span class="btn-msg btn-light btn-middle" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
-              <span class="btn-msg btn-light btn-right" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
-            </div>
-            <div class="msg" data-contact-target="firm">
-              <p>You work for a company and need to scale temporarly your teams, let's discuss about it !</p>
-              <p>ADR - 350€ per day</p>
-            </div>
-            <div class="msg d-none" data-contact-target="po">
-              <p>You have a great idea to develop and need web development skills ? Let's meet to see how make your dreams comes true !</p>
-              <p>First meeting free of charges.</p>
-            </div>
-            <div class="msg d-none" data-contact-target="recruiter">
-              <p>You are a recruiter looking for a freelance who can help your client ? Let's discuss about it !</p>
-              <p>ADR - 350€ per day</p>
-            </div>
-            <div class="msg d-none" data-contact-target="developer">
-              <p>Hello my friend ! I know that your are already checking my code ! So, clean enough to collaborate ?</p>
-            </div>
-            <div class="msg d-none" data-contact-target="designer">
-              <p>Because good UI/UX design makes everything better, I am always interested in working with webdsigners ! Let's meet up for future collaborations !</p>
-            </div>
-            <div class="msg d-none" data-contact-target="curious">
-              <p>No, curiosity won't kill the cat ! Being curious is a good thing in my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</p>
-            </div>
-            <div>
-              <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
-            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"> <i class="fas fa-chevron-left"></i> </span>
-            <div class="testimonials-container">
-              <% x = @testimonials.length %>
-              <% @testimonials.each do |testimonial| %>
-                <% if testimonial.id % x == 1 %>
-                  <div class="testimonial card-left-out" data-carroussel-target="card">
-                    <h2><%= testimonial.company %></h2>
-                    <p><%= testimonial.date %></p>
-                    <p>"<%= testimonial.descrition %> "</p>
-                  </div>
-                <% elsif testimonial.id % x == 2 %>
-                  <div class="testimonial card-left" data-carroussel-target="card">
-                    <h2><%= testimonial.company %></h2>
-                    <p><%= testimonial.date %></p>
-                    <p>"<%= testimonial.descrition %> "</p>
-                  </div>
-                <% elsif testimonial.id % x == 3  %>
-                  <div class="testimonial main" data-carroussel-target="card">
-                    <h2><%= testimonial.company %></h2>
-                    <p><%= testimonial.date %></p>
-                    <p>"<%= testimonial.descrition %> "</p>
-                  </div>
-                <% elsif testimonial.id % x == 4 %>
-                  <div class="testimonial card-right" data-carroussel-target="card">
-                    <h2><%= testimonial.company %></h2>
-                    <p><%= testimonial.date %></p>
-                    <p>"<%= testimonial.descrition %> "</p>
-                  </div>
-                  <% elsif testimonial.id % x == 5 %>
-                  <div class="testimonial card-right-out" data-carroussel-target="card">
-                    <h2><%= testimonial.company %></h2>
-                    <p><%= testimonial.date %></p>
-                    <p>"<%= testimonial.descrition %> "</p>
-                  </div>
-                <% else %>
-                  <div class="testimonial d-none" data-carroussel-target="card">
-                    <h2><%= testimonial.company %></h2>
-                    <p><%= testimonial.date %></p>
-                    <p>"<%= testimonial.descrition %> "</p>
-                  </div>
-                <% end %>
-              <% end  %>
-            </div>
-            <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnLeft"><i class="fas fa-chevron-right"></i></span>
-          </div>
+        <div class="d-flex justify-content-around align-items-center py-2">
+          <p data-filter-target="social" data-action="click->game#tag click->filter#social">#social</p>
+          <h6 data-filter-target="lifestyle" data-action="click->game#tag click->filter#lifestyle">#lifestyle<h6>
+          <p data-filter-target="perso" data-action="click->game#tag click->filter#perso">#personal</p>
+          <h4 data-filter-target="award" data-action="click->game#tag click->filter#award">#awarded</h4>
+        </div>
+        <div class="d-flex justify-content-around align-items-center py-2">
+          <p data-filter-target="study" data-action="click->game#tag click->filter#study">#study</p>
+          <h6 data-filter-target="sport" data-action="click->game#tag click->filter#sport">#sport<h6>
+          <p data-filter-target="env" data-action="click->game#tag click->filter#env">#environment<p>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="footer-classic py-3" data-change-mode-target="footer">
+      <div class="row">
+        <% @projects.each do |project| %>
+          <div class="col-12 col-lg-4">
+            <div class="effect-purpose reset" data-controller="projects" data-action="click->game#card click->projects#return" data-projects-target="card">
+              <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.pic %>')" data-change-mode-target="card">
+                <h4><%= project.title %></h4>
+                <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
+              </div>
+              <div class="card-classic card-project-back d-flex justify-content-between flex-column" data-change-mode-target="card">
+                <h4><%= project.title %></h4>
+                <p><%= project.description.size > 230 ? project.description.slice!(0..230) + " [...]" : project.description %></p>
+                <div class="text-right pb-2">
+                  <% if project.title == "Our next collaboration ?"  %>
+                    <span class="btn-link" data-action="click->navigation#contact">Contact</span>
+                  <% else %>
+                    <%= link_to "Details", project_path(project), class:"btn-link" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end  %>
+      </div>
+    </section>
+    <section class="contact container" data-controller="contact" data-game-target="end" data-navigation-target="contact">
+      <h2>Time to get in touch, you are ..</h2>
+      <div class="msg-wrap text-center d-flex align-items-center flex-column justify-content-between card-classic" data-change-mode-target="card">
+        <div class="d-flex btn-msg-wrap">
+          <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
+          <span class="btn-msg btn-light btn-middle" data-contact-target="poBtn" data-action="click->contact#po">Product Owner</span>
+          <span class="btn-msg btn-light btn-middle" data-contact-target="recruiterBtn" data-action="click->contact#recruiter">Recruiter</span>
+          <span class="btn-msg btn-light btn-middle" data-contact-target="developerBtn" data-action="click->contact#developer">Developer</span>
+          <span class="btn-msg btn-light btn-middle" data-contact-target="designerBtn" data-action="click->contact#designer">Web Designer</span>
+          <span class="btn-msg btn-light btn-right" data-contact-target="curiousBtn" data-action="click->contact#curious">Curious</span>
+        </div>
+        <div class="msg" data-contact-target="firm">
+          <p>You work for a company and need to scale temporarly your teams, let's discuss about it !</p>
+          <p>ADR - 350€ per day</p>
+        </div>
+        <div class="msg d-none" data-contact-target="po">
+          <p>You have a great idea to develop and need web development skills ? Let's meet to see how make your dreams comes true !</p>
+          <p>First meeting free of charges.</p>
+        </div>
+        <div class="msg d-none" data-contact-target="recruiter">
+          <p>You are a recruiter looking for a freelance who can help your client ? Let's discuss about it !</p>
+          <p>ADR - 350€ per day</p>
+        </div>
+        <div class="msg d-none" data-contact-target="developer">
+          <p>Hello my friend ! I know that your are already checking my code ! So, clean enough to collaborate ?</p>
+        </div>
+        <div class="msg d-none" data-contact-target="designer">
+          <p>Because good UI/UX design makes everything better, I am always interested in working with webdsigners ! Let's meet up for future collaborations !</p>
+        </div>
+        <div class="msg d-none" data-contact-target="curious">
+          <p>No, curiosity won't kill the cat ! Being curious is a good thing in my mind and something called "curiosity" is even rolling on mars right now, so don't be ashamed to be here !</p>
+        </div>
+        <div>
+          <a href="https://github.com/Remitdx" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/r%C3%A9mitondeux/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
+        <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"> <i class="fas fa-chevron-left"></i> </span>
+        <div class="testimonials-container">
+          <% x = @testimonials.length %>
+          <% @testimonials.each do |testimonial| %>
+            <% if testimonial.id % x == 1 %>
+              <div class="testimonial card-left-out" data-carroussel-target="card">
+                <h2><%= testimonial.company %></h2>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %> "</p>
+              </div>
+            <% elsif testimonial.id % x == 2 %>
+              <div class="testimonial card-left" data-carroussel-target="card">
+                <h2><%= testimonial.company %></h2>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %> "</p>
+              </div>
+            <% elsif testimonial.id % x == 3  %>
+              <div class="testimonial main" data-carroussel-target="card">
+                <h2><%= testimonial.company %></h2>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %> "</p>
+              </div>
+            <% elsif testimonial.id % x == 4 %>
+              <div class="testimonial card-right" data-carroussel-target="card">
+                <h2><%= testimonial.company %></h2>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %> "</p>
+              </div>
+              <% elsif testimonial.id % x == 5 %>
+              <div class="testimonial card-right-out" data-carroussel-target="card">
+                <h2><%= testimonial.company %></h2>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %> "</p>
+              </div>
+            <% else %>
+              <div class="testimonial d-none" data-carroussel-target="card">
+                <h2><%= testimonial.company %></h2>
+                <p><%= testimonial.date %></p>
+                <p>"<%= testimonial.descrition %> "</p>
+              </div>
+            <% end %>
+          <% end  %>
+        </div>
+        <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnLeft"><i class="fas fa-chevron-right"></i></span>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-classic py-3" data-change-mode-target="footer">
     <p>Made with love by myself - Thank you for your visit</p>
-  </div>
+  </footer>
 </div>
