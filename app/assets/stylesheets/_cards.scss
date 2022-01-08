@@ -24,22 +24,18 @@
 
 .effect-purpose {
   position: relative;
-  height: 350px;
+  height: 230px;
   perspective: 1000px;
   .card-project-front {
     position:absolute;
     top: 15px;
-    height: 320px;
+    height: 200px;
     width: 100%;
     background-position: center;
     background-size: cover;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all 0.3s ease;
-    &:hover {
-      top:0;
-      height:350px;
-    }
     h3 {
       font-family: var(--ff-handwrite);
       text-align: center;
@@ -51,7 +47,7 @@
   .card-project-back {
     position:absolute;
     top: 15px;
-    height: 320px;
+    height: 200px;
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -71,3 +67,20 @@
 }
 
 // flip-card also need the .reset css class in "avatar" to work nicely
+
+@media (min-width: 40em) {
+  .effect-purpose {
+    height: 350px;
+    .card-project-front {
+      height: 320px;
+      width: 100%;
+      &:hover {
+      top:0;
+      height:350px;
+    }
+    }
+    .card-project-back {
+      height: 320px;
+    }
+  }
+}
