@@ -1,12 +1,12 @@
 <div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->game#contact scroll@window->navigation#underline">
   <nav class="navigate-classic fixed-top" data-change-mode-target="navigate">
-    <div class="d-lg-flex text-center container">
+    <div class="d-lg-flex align-items-center text-center container">
       <div class="d-inline-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
         <span class="button btn-light btn-middle" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
-      <div class="d-flex grow justify-content-between">
+      <div class="d-flex flex-lg-fill justify-content-around">
         <h2 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h2>
         <h2 data-navigation-target="aboutBtn" data-action="click->navigation#about">About</h2>
         <h2 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h2>
