@@ -1,5 +1,5 @@
 .testimonials-container {
-  height: 300px;
+  height: 250px;
   position: relative;
   width: 85%;
   margin: 0 auto;
@@ -27,7 +27,7 @@
 
 .main {
   position: absolute;
-  top: 25px;
+  top: 0px;
   left: 5%;
   width: 90%;
   height: 250px;
@@ -43,25 +43,25 @@
 
 .card-left-out {
   position: absolute;
-  top: 50px;
+  top: 25px;
   left: -53%;
 }
 
 .card-left {
   position: absolute;
-  top: 50px;
+  top: 25px;
   left: -25%;
 }
 
 .card-right {
   position: absolute;
-  top: 50px;
+  top: 25px;
   left: 101%;
 }
 
 .card-right-out {
   position: absolute;
-  top: 50px;
+  top: 25px;
   left: 129%;
 }
 

@@ -1,3 +1,41 @@
 .msg {
-  width: 55%;
+  height: 300px;
+  text-align:center;
+}
+
+.btn-msg {
+  width: 125px;
+  text-align: center;
+  padding: 3px 0px;
+  cursor: pointer;
+}
+
+.fab {
+  font-size: var(--fs-xl);
+  margin: 0px 16px 8px 16px;
+}
+.bigger {
+  font-size: var(--fs-s);
+}
+
+@media (min-width: 40em) {
+  .btn-msg {
+    padding: 6px 4px;
+  }
+  .btn-msg-wrap {
+  border: 1px solid #8d8d8d;
+  border-radius: 7px;
+  }
+  .left {
+  border-radius: 6px 0 0 6px;
+  border-right: 1px solid #8d8d8d;
+  }
+
+  .middle {
+    border-right: 1px solid #8d8d8d;
+  }
+
+  .right {
+    border-radius: 0 6px 6px 0;
+  }
 }
