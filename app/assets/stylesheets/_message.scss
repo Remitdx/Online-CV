@@ -1,10 +1,11 @@
-.msg {
-  height: 300px;
-  text-align:center;
-}
-
+.part {
+  width: 100%;
+  margin: 12px;
+  text-align: center;
+  }
 .btn-msg {
-  width: 125px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
   padding: 3px 0px;
   cursor: pointer;
@@ -12,7 +13,7 @@
 
 .fab {
   font-size: var(--fs-xl);
-  margin: 0px 16px 8px 16px;
+  margin: 10px;
 }
 .bigger {
   font-size: var(--fs-s);
@@ -37,5 +38,10 @@
 
   .right {
     border-radius: 0 6px 6px 0;
+  }
+
+  .part {
+  width: 100%;
+  margin: 0;
   }
 }
