@@ -15,7 +15,7 @@
   --fs-xxl: 2.3rem;
   --fs-xl: 1.5rem;
   --fs-m: 1.3rem; // weird scaling take care
-  --fs-s: 1.125rem;
+  --fs-s: 1rem;
   --fs-xs: 0.75rem;
   --fs-xxs: 0.6rem;
 }
@@ -35,11 +35,6 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-.fab {
-  font-size: 32px;
-  margin: 0px 16px 8px 16px;
-}
-
 p{
   font-size: var(--fs-xs);
 }
@@ -47,6 +42,13 @@ p{
 .section-title {
   font-family: var(--ff-handwrite);
   font-size: var(--fs-xl);
+  padding: 20px 0;
+}
+
+@media (min-width: 40em) {
+  .section-title{
+    padding: 70px 0;
+  }
 }
 
 a {

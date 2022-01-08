@@ -1,12 +1,12 @@
 <div data-controller="navigation change-mode game" data-navigation-target="home" data-action="scroll@window->game#contact scroll@window->navigation#underline">
   <nav class="navigate-classic fixed-top" data-change-mode-target="navigate">
-    <div class="d-lg-flex text-center container">
+    <div class="d-lg-flex align-items-center text-center container">
       <div class="d-inline-flex btn-border">
         <span class="button btn-darky btn-left" data-change-mode-target="classic" data-action="click->change-mode#classic">Light</span>
         <span class="button btn-light btn-middle" data-change-mode-target="dark" data-action="click->game#mode click->change-mode#dark">Dark</span>
         <span class="button btn-light btn-right" data-change-mode-target="funky" data-action="click->game#mode click->change-mode#funky">Funky</span>
       </div>
-      <div class="d-flex grow justify-content-between">
+      <div class="d-flex flex-lg-fill justify-content-around">
         <h2 class="underline" data-navigation-target="homeBtn" data-action="click->navigation#home">Home</h2>
         <h2 data-navigation-target="aboutBtn" data-action="click->navigation#about">About</h2>
         <h2 data-navigation-target="projectBtn" data-action="click->navigation#projects">Projects</h2>
@@ -32,15 +32,13 @@
           <p> After being introduced to basics of algorithmic in engineering school around 2012, I keep on learning some programming languages on my own through the past years.
           But I realized that if I wanted to change my job I needed something more, a new impulse, know new trendy languages and meet people from this field.</p>
           <p>That's how I joined in 2021 "Le Wagon" bootcamp which gave me new technicals skills and nice tools to collaborate.</p>
-          <p>I am deeply exited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
+          <p>I am deeply excited about this new challenge and even more important, I really enjoy coding and learn new things everyday ! </p>
         </div>
-        <div class="card-classic" data-change-mode-target="card">
-          <div class="game">
-            <h3>Let's play a little game:</h3>
-            <p>Try to check every feature of this website !</p>
-            <p>(refresh to reset progression)</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <p>Progress: </p>
+        <div class="card-classic my-5" data-change-mode-target="card">
+          <div class="game text-center">
+            <h3>Let's play a little game</h3>
+            <p class="bigger-p">Try to check every feature of this website</p>
+            <div class="d-flex justify-content-around align-items-center py-3">
               <div class="d-flex progress-container">
                 <div class="green" data-game-target="green" style="width: 9%;">
                 </div>
@@ -49,11 +47,12 @@
               </div>
               <p data-game-target="percent"> 9%</p>
             </div>
-            <span class="btn btn-success" data-action="click->game#hint">Hint</span>
+            <p>(refresh to reset progression)</p>
+            <span data-action="click->game#hint"><i class="hint fas fa-lightbulb"></i></span>
             <div class="d-none" data-game-target="hint">
               <p> Visit the homepage: <span class="true"><i class="fas fa-check"></i></span></p>
               <p> Switch to dark or funky mode: <span data-game-target="mode" class="false"><i class="fas fa-times"></i></span></p>
-              <p> Find a way to return the profile picture: <span data-game-target="avatar" class="false"><i class="fas fa-times"></i></span></p>
+              <p> Return the profile picture: <span data-game-target="avatar" class="false"><i class="fas fa-times"></i></span></p>
               <p> Browse the projects with tags: <span data-game-target="tag" class="false"><i class="fas fa-times"></i></span></p>
               <p> Return a project card: <span data-game-target="card" class="false"><i class="fas fa-times"></i></span> </p>
               <p> Rotate the testimonials: <span data-game-target="carrou" class="false"><i class="fas fa-times"></i></span> </p>
@@ -108,7 +107,7 @@
           Everything here define who I am and gave me either technical or soft skills.</p>
         <p>Feel free to sort them using the tags below.</p>
       </div>
-      <div class="tags-wrap">
+      <div class="tags-wrap my-4">
         <div class="d-flex justify-content-around align-items-center">
           <p class="bigger" data-filter-target="all" data-action="click->game#tag click->filter#all">#all</p>
           <p data-filter-target="pro" data-action="click->game#tag click->filter#pro">#professional</p>
@@ -151,8 +150,9 @@
       </div>
     </section>
     <section class="contact container" data-controller="contact" data-game-target="end" data-navigation-target="contact">
-      <h2 class="section-title" >Time to get in touch, you are ..</h2>
+      <h2 class="section-title" >Time to get in touch</h2>
       <div class="card-classic" data-change-mode-target="card">
+        <p>You are ...</p>
         <div class="d-inline-flex flex-lg-column">
           <div class="d-flex flex-column flex-lg-row btn-msg-wrap">
             <span class="btn-msg btn-darky btn-left" data-contact-target="firmBtn" data-action="click->contact#firm">Firm</span>
@@ -190,6 +190,7 @@
           <p><i class="far fa-envelope"> : remi.tondeux@gmail.com</i></p>
         </div>
       </div>
+      <h2 class="section-title" >They trust me</h2>
       <div class="d-flex justify-content-center align-items-center" data-controller="carroussel">
         <span class="btn btn-carrou" data-action="click->game#carrou click->carroussel#turnRight"> <i class="fas fa-chevron-left"></i> </span>
         <div class="testimonials-container">
