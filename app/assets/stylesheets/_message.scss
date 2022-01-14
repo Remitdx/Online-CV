@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.msg {
+  height: 250px;
+}
+
 .fab {
   font-size: var(--fs-xl);
   margin: 10px;
@@ -43,5 +47,10 @@
   .part {
   width: 100%;
   margin: 0;
+  }
+  .msg {
+    height: 140px;
+    width: 60%;
+    margin: 20px auto;
   }
 }
