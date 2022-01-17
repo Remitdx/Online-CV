@@ -13,7 +13,6 @@ Turbolinks.start()
 import "controllers"
 
 import { DynamicJobTitle } from '../components/jobtitle';
-import Swal from "sweetalert2"
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
