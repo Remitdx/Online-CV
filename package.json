@@ -7,6 +7,7 @@
     "@rails/webpacker": "5.4.3",
     "bootstrap": "4.6",
     "stimulus": "^3.0.1",
+    "sweetalert2": "^11.3.5",
     "turbolinks": "^5.2.0",
     "typed.js": "^2.0.12",
     "webpack": "^4.46.0",
