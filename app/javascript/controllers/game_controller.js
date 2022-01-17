@@ -103,10 +103,10 @@ export default class extends Controller {
       this.carrouTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
       let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 17}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 17)}%;"></div>`
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 11}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 11)}%;"></div>`
       this.percentTarget.innerHTML = `${percent + 17}%`;
-      percent += 17;
+      percent += 11;
       if (percent == 100) {
         Swal.fire({
           position: 'top-end',
@@ -129,6 +129,27 @@ export default class extends Controller {
       this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 10)}%;"></div>`
       this.percentTarget.innerHTML = `${percent + 10}%`;
       percent += 10;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+    }
+  }
+  curious(event) {
+    if (this.curiousTarget.matches(".false")) {
+      this.curiousTarget.classList.add("true");
+      this.curiousTarget.classList.remove("false");
+      this.curiousTarget.innerHTML = '<i class="fas fa-check"></i>';
+      const regexp = /\d+/;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 6}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 6)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 6}%`;
+      percent += 6;
       if (percent == 100) {
         Swal.fire({
           position: 'top-end',
