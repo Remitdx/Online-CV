@@ -1,4 +1,5 @@
 import { Controller } from "stimulus";
+import Swal from "sweetalert2"
 
 export default class extends Controller {
   static targets = ['hint','mode', 'avatar', 'card', 'tag', 'carrou', 'contact', 'green', 'red', 'percent', 'end']
@@ -13,10 +14,19 @@ export default class extends Controller {
       this.modeTarget.classList.remove("false");
       this.modeTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/ ;
-      const percent = this.greenTarget.outerHTML.match(regexp)[0];
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${parseInt(percent, 10) + 18}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100-(parseInt(percent, 10) + 18)}%;"></div>`
-      this.percentTarget.innerHTML = `${parseInt(percent, 10)+ 18}%`;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 18}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100-(percent + 18)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent+ 18}%`;
+      percent += 18;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
     }
   }
 
@@ -26,10 +36,20 @@ export default class extends Controller {
       this.tagTarget.classList.remove("false");
       this.tagTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
-      const percent = this.greenTarget.outerHTML.match(regexp)[0];
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${parseInt(percent, 10) + 15}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (parseInt(percent, 10) + 15)}%;"></div>`
-      this.percentTarget.innerHTML = `${parseInt(percent, 10) + 15}%`;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 15}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 15)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 15}%`;
+      percent += 15;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+
     }
   }
 
@@ -39,10 +59,20 @@ export default class extends Controller {
       this.cardTarget.classList.remove("false");
       this.cardTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
-      const percent = this.greenTarget.outerHTML.match(regexp)[0];
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${parseInt(percent, 10) + 17}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (parseInt(percent, 10) + 17)}%;"></div>`
-      this.percentTarget.innerHTML = `${parseInt(percent, 10) + 17}%`;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 17}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 17)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 17}%`;
+      percent += 17;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+
     }
   }
 
@@ -52,10 +82,20 @@ export default class extends Controller {
       this.carrouTarget.classList.remove("false");
       this.carrouTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
-      const percent = this.greenTarget.outerHTML.match(regexp)[0];
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${parseInt(percent, 10) + 17}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (parseInt(percent, 10) + 17)}%;"></div>`
-      this.percentTarget.innerHTML = `${parseInt(percent, 10) + 17}%`;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 17}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 17)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 17}%`;
+      percent += 17;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+
     }
   }
 
@@ -65,10 +105,20 @@ export default class extends Controller {
       this.avatarTarget.classList.remove("false");
       this.avatarTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
-      const percent = this.greenTarget.outerHTML.match(regexp)[0];
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${parseInt(percent, 10) + 10}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (parseInt(percent, 10) + 10)}%;"></div>`
-      this.percentTarget.innerHTML = `${parseInt(percent, 10) + 10}%`;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 10}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 10)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 10}%`;
+      percent += 10;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+
     }
   }
   contact(event) {
@@ -77,13 +127,20 @@ export default class extends Controller {
       this.contactTarget.classList.remove("false");
       this.contactTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
-      const percent = this.greenTarget.outerHTML.match(regexp)[0];
-      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${parseInt(percent, 10) + 14}%;"></div>`
-      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (parseInt(percent, 10) + 14)}%;"></div>`
-      this.percentTarget.innerHTML = `${parseInt(percent, 10) + 14}%`;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 14}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 14)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 14}%`;
+      percent += 14;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+
     }
   }
-
 }
-
-// puts target over buttons and stuff to count progress !
