@@ -2,10 +2,32 @@ import { Controller } from "stimulus";
 import Swal from "sweetalert2"
 
 export default class extends Controller {
-  static targets = ['hint','mode', 'avatar', 'card', 'tag', 'carrou', 'contact', 'green', 'red', 'percent', 'end']
+  static targets = ['hint','mode', 'avatar', 'card', 'tag', 'carrou', 'contact', 'home', 'curious', 'green', 'red', 'percent', 'end']
 
   hint(event) {
     this.hintTarget.classList.toggle("d-none");
+  }
+
+  home(event) {
+    if (this.homeTarget.matches(".false") && window.scrollY === 0) {
+      this.homeTarget.classList.add("true");
+      this.homeTarget.classList.remove("false");
+      this.homeTarget.innerHTML = '<i class="fas fa-check"></i>';
+      const regexp = /\d+/;
+      let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
+      this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 9}%;"></div>`
+      this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 9)}%;"></div>`
+      this.percentTarget.innerHTML = `${percent + 9}%`;
+      percent += 9;
+      if (percent == 100) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Well done, you reach 100% in our little game',
+          showConfirmButton: true,
+        });
+      }
+    }
   }
 
   mode(event) {
@@ -49,7 +71,6 @@ export default class extends Controller {
           showConfirmButton: true,
         });
       }
-
     }
   }
 
@@ -72,7 +93,6 @@ export default class extends Controller {
           showConfirmButton: true,
         });
       }
-
     }
   }
 
@@ -95,7 +115,6 @@ export default class extends Controller {
           showConfirmButton: true,
         });
       }
-
     }
   }
 
@@ -118,7 +137,6 @@ export default class extends Controller {
           showConfirmButton: true,
         });
       }
-
     }
   }
   contact(event) {
@@ -140,7 +158,6 @@ export default class extends Controller {
           showConfirmButton: true,
         });
       }
-
     }
   }
 }
