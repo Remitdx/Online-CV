@@ -6,6 +6,9 @@
   border-radius: 90px;
   p {
     cursor: pointer;
+    &:hover{
+      font-weight: bold;
+    }
   }
   .bigger{
     font-size: var(--fs-s);
