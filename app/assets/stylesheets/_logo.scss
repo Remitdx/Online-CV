@@ -1,9 +1,25 @@
 .logos {
   background-color: rgba($color: white, $alpha: 0.2);
   border-radius: 10px;
-  height: 200px;
   width: 95%;
   margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  h3 {
+    font-size: var(--fs-s);
+    padding-bottom: 20px;
+  }
+  .btn-grey {
+    cursor: pointer;
+    font-size: var(--fs-xs);
+    color: black;
+    background-color: #b8b8b8;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 16px;
+    box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.8);
+    margin: 10px;
+  }
 }
 
 .logo {
@@ -11,7 +27,21 @@
   padding: 4px;
 }
 
+.fadeinout{
+  animation: fadeinout 2s linear 1 forwards;
+}
+
+@keyframes fadeinout {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @media (min-width: 40em) {
+  .logos{
+    height: 150px;
+  }
+
   .logo {
     height: 75px;
     padding: 8px;
