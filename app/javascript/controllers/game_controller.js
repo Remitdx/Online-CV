@@ -105,7 +105,7 @@ export default class extends Controller {
       let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
       this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 11}%;"></div>`
       this.redTarget.outerHTML = `<div class="red" data-game-target="red" style="width: ${100 - (percent + 11)}%;"></div>`
-      this.percentTarget.innerHTML = `${percent + 17}%`;
+      this.percentTarget.innerHTML = `${percent + 11}%`;
       percent += 11;
       if (percent == 100) {
         Swal.fire({

@@ -17,10 +17,20 @@
 
 .fab {
   font-size: var(--fs-xl);
-  margin: 10px;
 }
 .bigger {
   font-size: var(--fs-s);
+}
+
+.media {
+  font-size: var(--fs-s);
+  color: black;
+  background-color: #b8b8b8;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px 20px;
+  box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.8);
+  margin: 10px;
 }
 
 @media (min-width: 40em) {

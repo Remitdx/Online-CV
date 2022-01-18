@@ -4,19 +4,23 @@ export default class extends Controller {
   static targets = ['home', 'body', 'projects', 'contact', 'homeBtn', 'aboutBtn', 'projectBtn', 'contactBtn']
 
   underline(event) {
-    if (window.scrollY < this.bodyTarget.offsetTop * 0.5) {
+    const posAbout = this.bodyTarget.offsetTop;
+    const posProjects = this.projectsTarget.offsetTop;
+    const posContact = this.contactTarget.offsetTop;
+
+    if (window.scrollY < posAbout * 0.5) {
       this.homeBtnTarget.classList.add("underline");
       this.aboutBtnTarget.classList.remove("underline");
       this.projectBtnTarget.classList.remove("underline");
       this.contactBtnTarget.classList.remove("underline");
     }
-    else if ((window.scrollY > this.bodyTarget.offsetTop * 0.5) && (window.scrollY < this.bodyTarget.offsetTop + (this.projectsTarget.offsetTop - this.bodyTarget.offsetTop) * 0.5)) {
+    else if ((window.scrollY > posAbout * 0.5) && (window.scrollY < posAbout + (posProjects - posAbout) * 0.5)) {
       this.homeBtnTarget.classList.remove("underline");
       this.aboutBtnTarget.classList.add("underline");
       this.projectBtnTarget.classList.remove("underline");
       this.contactBtnTarget.classList.remove("underline");
     }
-    else if ((window.scrollY > this.bodyTarget.offsetTop + (this.projectsTarget.offsetTop - this.bodyTarget.offsetTop) * 0.5) && (window.scrollY < this.projectsTarget.offsetTop + (this.contactTarget.offsetTop - this.projectsTarget.offsetTop) * 0.5)) {
+    else if ((window.scrollY > posAbout + (posProjects - posAbout) * 0.5) && (window.scrollY < posProjects + (posContact - posProjects) * 0.5)) {
       this.homeBtnTarget.classList.remove("underline");
       this.aboutBtnTarget.classList.remove("underline");
       this.projectBtnTarget.classList.add("underline");
