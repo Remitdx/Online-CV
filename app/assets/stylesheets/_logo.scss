@@ -4,14 +4,37 @@
   height: 200px;
   width: 95%;
   margin: 0 auto;
+  text-align: center;
+  h3 {
+    font-size: var(--fs-s);
+    padding: 10px 0;
+  }
+  .btn-grey {
+  font-size: var(--fs-xs);
+  color: black;
+  background-color: #b8b8b8;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 16px;
+  box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.8);
+  margin: 10px;
+}
 }
 
 .logo {
   height: 45px;
   padding: 4px;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 40em) {
+  .logos{
+    height: 150px;
+  }
+
   .logo {
     height: 75px;
     padding: 8px;
