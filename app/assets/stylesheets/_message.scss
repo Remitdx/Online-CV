@@ -13,6 +13,12 @@
 
 .msg {
   height: 250px;
+  animation: fade 1s linear 1 forwards;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .fab {
