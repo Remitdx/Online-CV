@@ -2,17 +2,17 @@ import { Controller } from "stimulus";
 import Swal from "sweetalert2"
 
 export default class extends Controller {
-  static targets = ['hint','mode', 'avatar', 'card', 'tag', 'carrou', 'contact', 'home', 'curious', 'green', 'red', 'percent', 'end']
+  static targets = ['hint','mode', 'avatar', 'card', 'tag', 'carrou', 'contact', 'logo', 'curious', 'green', 'red', 'percent', 'end']
 
   hint(event) {
     this.hintTarget.classList.toggle("d-none");
   }
 
-  home(event) {
-    if (this.homeTarget.matches(".false") && window.scrollY === 0) {
-      this.homeTarget.classList.add("true");
-      this.homeTarget.classList.remove("false");
-      this.homeTarget.innerHTML = '<i class="fas fa-check"></i>';
+  logos(event) {
+    if (this.logoTarget.matches(".false")) {
+      this.logoTarget.classList.add("true");
+      this.logoTarget.classList.remove("false");
+      this.logoTarget.innerHTML = '<i class="fas fa-check"></i>';
       const regexp = /\d+/;
       let percent = parseInt(this.greenTarget.outerHTML.match(regexp)[0], 10);
       this.greenTarget.outerHTML = `<div class="green" data-game-target="green" style="width: ${percent + 9}%;"></div>`
