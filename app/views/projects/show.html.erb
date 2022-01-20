@@ -1,6 +1,8 @@
 <div class="container">
   <h1><%= @project.title %></h1>
-  <%= image_tag @project.pic, class: "bigpic" %>
+  <% @project.pic.split(' ').each do |pic| %>
+    <%= image_tag pic, class: "bigpic" %>
+  <% end  %>
   <p><%= @project.description %></p>
   <%= link_to "Home", root_path, class:"btn-link" %>
 </div>
