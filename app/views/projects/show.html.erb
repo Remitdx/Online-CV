@@ -1,8 +1,14 @@
-<div class="container">
+<div class="container show">
   <h1><%= @project.title %></h1>
-  <% @project.pic.split(' ').each do |pic| %>
-    <%= image_tag pic, class: "bigpic" %>
-  <% end  %>
-  <p><%= @project.description %></p>
-  <%= link_to "Home", root_path, class:"btn-link" %>
+  <div class="d-flex flex-column flex-lg-row">
+    <div class="leftside">
+      <p><%= @project.description %></p>
+      <%= link_to "Home", root_path, class:"btn-link" %>
+    </div>
+    <div class="rightside d-flex flex-wrap flex-column flex-lg-row justify-content-around">
+      <% @project.pic.split(' ').each do |pic| %>
+        <%= image_tag pic, class: "pic mx-auto" %>
+      <% end  %>
+    </div>
+  </div>
 </div>

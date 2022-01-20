@@ -2,12 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.bigpic {
-  width: 80vw;
+.pic {
+  margin: 10px;
+  height: 33vh;
+}
+.leftside {
+}
+.rightside {
 }
 
 @media (min-width: 40em) {
-  .bigpic {
-    width: 50vw;
+  .pic {
+    height: 45vh;
+  }
+}
+
+.show {
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--ff-handwrite);
   }
 }
