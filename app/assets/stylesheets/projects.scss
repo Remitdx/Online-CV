@@ -14,11 +14,13 @@
 
 .pic {
   margin: 10px;
-  height: 33vh;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 40em) {
   .pic {
+    width: auto;
     height: 45vh;
   }
 }
