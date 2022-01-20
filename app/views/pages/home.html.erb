@@ -134,7 +134,7 @@
         <% @projects.each do |project| %>
           <div class="col-12 col-lg-4">
             <div class="effect-purpose reset" data-controller="projects" data-action="click->game#card click->projects#return" data-projects-target="card">
-              <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.pic %>')" data-change-mode-target="card">
+              <div class="card-classic card-project-front d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.pic.split(' ')[0] %>')" data-change-mode-target="card">
                 <h3><%= project.title %></h3>
                 <span class="d-none" data-filter-target="tags"><%= project.tags %></span>
               </div>
